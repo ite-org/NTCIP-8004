@@ -3,8 +3,8 @@ Structure and Identification of Management Information (SMI)
 
 ## Important Links
 
-- Current MIB
-- Other Releases
+- [Current MIB](https://github.com/ite-org/NTCIP-8004/)
+- [Other Releases](https://github.com/ite-org/NTCIP-8004/releases)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [License](LICENSE.md)
 - [Full Standard](https://www.ntcip.org/file/2018/11/NTCIP8004v0217r.pdf)
