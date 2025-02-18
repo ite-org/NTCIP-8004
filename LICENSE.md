@@ -1,60 +1,18 @@
 # License
 
-(c) Copyright 1998 by the American Association of State Highway
-and Transportation Officials (AASHTO), the Institute of
-Transportation Engineers (ITE), and the National Electrical
-Manufacturers Association (NEMA).  All intellectual property rights,
-including, but not limited to, the rights of reproduction, translation
-and display are reserved under the laws of the United States of
-America, the Universal Copyright Convention, the Berne Convention,
-and the International and Pan American Copyright Conventions.  Except
-as provided, you may not copy these materials without written
-permission from either AASHTO, ITE, or NEMA.  Use of these materials
-does not give you any rights of ownership or claim of copyright in
-or to these materials.
+To the extent that these materials are distributed by AASHTO / ITE / NEMA in the form of a Data Dictionary (“DD”) or Management Information Base (“MIB”), AASHTO / ITE / NEMA extend the following permission:
 
-To the extent and in the limited event these materials are
-distributed by AASHTO/ITE/NEMA in the form of a Management
-Information Base ("MIB"), AASHTO/ITE/NEMA extends the following
-permissions:
+You may make or distribute unlimited copies, in part or full, of the DD or MIB, including copies for commercial distribution, provided that:
 
-(i)  you may make and/or distribute unlimited copies (including
-derivative works) of the MIB, including copies for commercial
-distribution, provided that (a) each copy you make and/or distribute
-contains this Notice and (b) each derivative work of the MIB uses
-the same module name followed by "-", followed by your Internet
-Assigned Number Authority (IANA)-assigned enterprise number;
-(ii)  use of the MIB is restricted in that the syntax field may be
-modified only to reflect a more restrictive subrange or enumerated
-values;
-(iii)  the description field may be modified but only to the extent
-that:  (a) only those bit values or enumerated values that are
-supported are listed; and (b) the more restrictive subrange is
-expressed.
+a) each copy you make or distribute contains the citation “From NTCIP 0000 [insert the standard number]. Used by permission of AASHTO / ITE / NEMA.”;
+b) the copies are not edited from the published version of this document.
 
-These materials are delivered "AS IS" without any warranties as to
-their use or performance.
+These materials are delivered “AS IS” without any warranties as to their use or performance.
 
-AASHTO/ITE/NEMA AND THEIR SUPPLIERS DO NOT WARRANT THE PERFORMANCE
-OR RESULTS YOU MAY OBTAIN BY USING THESE MATERIALS.  AASHTO/ITE/NEMA
-AND THEIR SUPPLIERS MAKE NO WARRANTIES, EXPRESS OR IMPLIED, AS TO
-NONINFRINGEMENT OF THIRD PARTY RIGHTS, MERCHANTABILITY, OR FITNESS
-FOR ANY PARTICULAR PURPOSE.  IN NO EVENT WILL AASHTO, ITE OR NEMA
-OR THEIR SUPPLIERS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY CLAIM
-OR FOR ANY CONSEQUENTIAL, INCIDENTAL OR SPECIAL DAMAGES, INCLUDING
-ANY LOST PROFITS OR LOST SAVINGS, ARISING FROM YOUR REPRODUCTION OR
-USE OF THESE MATERIALS, EVEN IF AN AASHTO, ITE, OR NEMA
-REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  
-Some states or jurisdictions do not allow the exclusion or
-limitation of incidental, consequential or special damages, or the
-exclusion of implied warranties, so the above limitations may not
-apply to you.
+AASHTO / ITE / NEMA and their suppliers do not warrant the performance or results you may obtain by using these materials. AASHTO / ITE / NEMA and their suppliers make no warranties, express or implied, as to noninfringement of third party rights, merchantability, or fitness for any particular purpose. In no event will AASHTO / ITE / NEMA or their suppliers be liable to you or any third party for any claim or for any consequential, incidental or special damages, including any lost profits or lost savings, arising from your reproduction or use of these materials, even if an AASHTO / ITE / NEMA representative has been advised of the possibility of such damages.
 
-Use of these materials does not constitute an endorsement or
-affiliation by or between AASHTO, ITE, or NEMA and you, your company,
-or your products and services.
+Some states or jurisdictions do not allow the exclusion or limitation of incidental, consequential, or special damages, or the exclusion of implied warranties, so the above limitations may not apply to a given user.
 
-If you are unwilling to accept the foregoing restrictions, you
-should immediately return these materials.
+Use of these materials does not constitute an endorsement or affiliation by or between AASHTO, ITE, or NEMA and the user, the user's company, or the products and services of the user's company.
 
-NTCIP is a trademark of AASHTO/ITE/NEMA.
+If the user is unwilling to accept the foregoing restrictions, he or she should immediately return these materials.
