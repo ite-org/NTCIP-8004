@@ -1,0 +1,71 @@
+NTCIP8004-NEMA DEFINITIONS ::= BEGIN
+
+IMPORTS
+  MODULE-IDENTITY, OBJECT-IDENTITY, enterprises
+                                                 FROM SNMPv2-SMI;
+                                                   -- RFC 2578
+
+nema MODULE-IDENTITY
+  LAST-UPDATED "202212120500Z"
+  ORGANIZATION "NTCIP BSP2 WG"
+  CONTACT-INFO
+    "name:    NTCIP Coordinator
+     email:   ntcip@nema.org
+     postal:  National Electrical Manufacturers Association
+              1300 North 17th Street, Suite 1752
+              Rosslyn, VA 22209-3801
+              USA"
+  DESCRIPTION 
+    "IANA delegated sub-identifier 1206 under the enterprise node to NEMA
+     This MIB defines the overall structure of management information 
+     that is believed to be useful for a broad range of applications."
+  REVISION     "202212120500Z"
+  DESCRIPTION  
+    "Updated to SMIv2. Divided module into a separate NEMA managed parent 
+     module and an NTCIP managed module. "
+  REVISION     "200507190500Z"
+  DESCRIPTION  "MIB moved into NTCIP 8004 with updated module name."
+  REVISION     "200112010500Z"
+  DESCRIPTION  "NEMA TS 3.2 republished as NTCIP 1101 v01."
+  REVISION     "199610010500Z"
+  DESCRIPTION  "NEMA TS 3.2 approved."
+  ::= { enterprises 1206 }
+
+nemaMgmt                OBJECT-IDENTITY
+  STATUS      current
+  DESCRIPTION "The mgmt subtree is used for standard NEMA object definitions 
+    that span different NEMA sections."
+  ::=  { nema 1 }
+
+nemaExperimental        OBJECT-IDENTITY
+  STATUS      current
+  DESCRIPTION "The experimental subtree is used to identify object types used 
+    only on an experimental basis. Changing OBJECT IDENTIFIERs once assigned     
+    is challenging due to an installed base. Thus, this node should only be 
+    used for experiments, such as research efforts that are strictly limited 
+    to be short-term projects to investigate and test ideas. More permanent 
+    node assignments should be obtained prior to any longer-term or larger-
+    scale deployment to prevent complications if, and when, the solution 
+    becomes more widely adopted."
+  ::=  { nema 2 }
+
+expGlobal OBJECT-IDENTITY 
+  STATUS  deprecated
+  DESCRIPTION
+    "<Definition> A node that contains the experimental auxiliary 
+     input/output objects.
+     <Object Identifier> 1.3.6.1.4.1.1206.2.2"
+::= {nemaExperimental 2} 
+
+nemaPrivate             OBJECT-IDENTITY
+  STATUS      current
+    DESCRIPTION
+"The private subtree is used to identify object types defined unilaterally. NEMA assigns nodes to enterprises for purposes such as defining enterprise-specific MIB modules. A request for a node assignment can be sent to the NTCIP Coordinator at ntcip@nema.org. When a sub-node is assigned, the responsibility for managing that sub-node is transferred to the enterprise making the request.
+
+   Upon receiving a node, the enterprise may, for example, define new MIB modules and object types under this node. In addition, it is strongly recommended that the enterprise also register its transportation devices under this subtree, to provide an unambiguous identification mechanism for use in management protocols. For example, if the 'ABC, Inc.' enterprise produced transportation devices, then it could request a node under the nemaPrivate node from NEMA. Such a node might be numbered: 1.3.6.1.4.1.1206.3.99
+
+   The 'ABC, Inc.' enterprise might then register their 'Widget Controller' under the name of 1.3.6.1.4.1.1206.3.99.1, ensuring a unique identification. Thereafter, each enterprise is responsible for ensuring unique identification of information objects within their subtree. NEMA delegates the role of assigning numbers under each nemaPrivate node to those to which they are assigned, except of course for the initial enterprise number."
+  ::= { nema 3 }
+
+END -- NTCIP8004-NEMA
+

@@ -1,0 +1,1874 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="NTCIP Structure of Management Information" name="description"/>
+<link href="https://ite-org.github.io/NTCIP-8004/smi/" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>NTCIP Structure of Management Information (SMI) [Normative] - NTCIP SMI</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M208%20352c114.9%200%20208-78.8%20208-176S322.9%200%20208%200%200%2078.8%200%20176c0%2038.6%2014.7%2074.3%2039.6%20103.4-3.5%209.4-8.7%2017.7-14.2%2024.7-4.8%206.2-9.7%2011-13.3%2014.3-1.8%201.6-3.3%202.9-4.3%203.7-.5.4-.9.7-1.1.8l-.2.2C1%20327.2-1.4%20334.4.8%20340.9S9.1%20352%2016%20352c21.8%200%2043.8-5.6%2062.1-12.5%209.2-3.5%2017.8-7.4%2025.2-11.4C134.1%20343.3%20169.8%20352%20208%20352m240-176c0%20112.3-99.1%20196.9-216.5%20207%2024.3%2074.4%20104.9%20129%20200.5%20129%2038.2%200%2073.9-8.7%20104.7-23.9%207.5%204%2016%207.9%2025.2%2011.4%2018.3%206.9%2040.3%2012.5%2062.1%2012.5%206.9%200%2013.1-4.5%2015.2-11.1s-.2-13.8-5.8-17.9l-.2-.2c-.2-.2-.6-.4-1.1-.8-1-.8-2.5-2-4.3-3.7-3.6-3.3-8.5-8.1-13.3-14.3-5.5-7-10.7-15.4-14.2-24.7%2024.9-29%2039.6-64.7%2039.6-103.4%200-92.8-84.9-168.9-192.6-175.5.4%205.1.6%2010.3.6%2015.5z%22/%3E%3C/svg%3E');}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../stylesheets/pdf.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#ntcip-structure-of-management-information-smi-normative">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<!--  <p class="status-badge proposal">Proposal: This is a newly proposed project that does not yet reflect broad community input</p>
+-->
+<p class="status-badge draft">Draft: This is a draft document that is subject to significant changes at any time</p>
+<!--  <p class="status-badge preliminary">Preliminary: This is a preliminary document and may experience changes prior to finalization</p>
+  <p class="status-badge recommended">Recommended: This document has been recommended for balloting but is not yet approved</p>
+  <p class="status-badge approved">Recommended: This is an approved document</p>
+-->
+</div>
+</aside>
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+<aside class="md-banner md-banner--warning">
+<div class="md-banner__inner md-grid md-typeset">
+              
+You're not viewing the latest version.
+<a href="../..">
+<strong>Click here to go to latest.</strong>
+</a>
+</div>
+<script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+</aside>
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="NTCIP SMI" class="md-header__button md-logo" data-md-component="logo" href=".." title="NTCIP SMI">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            NTCIP SMI
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              NTCIP Structure of Management Information (SMI) [Normative]
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/ite-org/NTCIP-8004" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<a class="md-header-nav__button md-icon" href="../pdf/NTCIP-8004.pdf" title="PDF">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,0c-17.6,0-32,14.4-32,32v448c0,17.6,14.4,32,32,32h320c17.6,0,32-14.4,32-32V128L352,0H128z" fill="#E2E5E7"></path>
+<path d="m384 128h96l-128-128v96c0 17.6 14.4 32 32 32z" fill="#B0B7BD"></path>
+<polygon fill="#CAD1D8" points="480 224 384 128 480 128"></polygon>
+<path d="M416,416c0,8.8-7.2,16-16,16H48c-8.8,0-16-7.2-16-16V256c0-8.8,7.2-16,16-16h352c8.8,0,16,7.2,16,16  V416z" fill="#F15642"></path>
+<g fill="#fff">
+<path d="m101.74 303.15c0-4.224 3.328-8.832 8.688-8.832h29.552c16.64 0 31.616 11.136 31.616 32.48 0 20.224-14.976 31.488-31.616 31.488h-21.36v16.896c0 5.632-3.584 8.816-8.192 8.816-4.224 0-8.688-3.184-8.688-8.816v-72.032zm16.88 7.28v31.872h21.36c8.576 0 15.36-7.568 15.36-15.504 0-8.944-6.784-16.368-15.36-16.368h-21.36z"></path>
+<path d="m196.66 384c-4.224 0-8.832-2.304-8.832-7.92v-72.672c0-4.592 4.608-7.936 8.832-7.936h29.296c58.464 0 57.184 88.528 1.152 88.528h-30.448zm8.064-72.912v57.312h21.232c34.544 0 36.08-57.312 0-57.312h-21.232z"></path>
+<path d="m303.87 312.11v20.336h32.624c4.608 0 9.216 4.608 9.216 9.072 0 4.224-4.608 7.68-9.216 7.68h-32.624v26.864c0 4.48-3.184 7.92-7.664 7.92-5.632 0-9.072-3.44-9.072-7.92v-72.672c0-4.592 3.456-7.936 9.072-7.936h44.912c5.632 0 8.96 3.344 8.96 7.936 0 4.096-3.328 8.704-8.96 8.704h-37.248v0.016z"></path>
+</g>
+<path d="m400 432h-304v16h304c8.8 0 16-7.2 16-16v-16c0 8.8-7.2 16-16 16z" fill="#CAD1D8"></path>
+</svg>
+</a></nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Determine classes -->
+<!-- Navigation -->
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<!-- Site title -->
+<label class="md-nav__title" for="__drawer">
+<a aria-label="NTCIP SMI" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Contents">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Contents
+  </label>
+<!-- Repository information -->
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/ite-org/NTCIP-8004" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<!-- Navigation list -->
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Front Matter
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Front Matter
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Title Page
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notices/">
+<span class="md-ellipsis">
+    Notices
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../acknowledgements/">
+<span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../foreword/">
+<span class="md-ellipsis">
+    Foreword
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../general/">
+<span class="md-ellipsis">
+    1 General
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../background/">
+<span class="md-ellipsis">
+    2 Background
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../object-identification/">
+<span class="md-ellipsis">
+    3 Object Identification
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rules-for-module-development/">
+<span class="md-ellipsis">
+    4 Rules for Module Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../requirements-for-agent-implementations/">
+<span class="md-ellipsis">
+    5 Requirements for Implementations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../guidelines-for-operating-agencies/">
+<span class="md-ellipsis">
+    6 Guidelines for Agencies
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Determine title -->
+<!-- Table of contents -->
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+<!-- Table of contents title and list -->
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 class="ANNEX-heading1" id="ntcip-structure-of-management-information-smi-normative">NTCIP Structure of Management Information (<abbr title="Structure and Identification of Management Information">SMI</abbr>) [Normative]<a class="headerlink" href="#ntcip-structure-of-management-information-smi-normative" title="Permanent link">¶</a></h1>
+<p>Annex A defines the overall structure of the NTCIP-defined management
+information and several textual conventions that are believed to be
+useful for a broad range of applications. The text provided in Annex A.1
+constitutes the standard NTCIP8004-NemaV1 MIB. Annex A.2 (except the
+headings) constitutes the standard NTCIP8004-TransportationV1 MIB.</p>
+<ol>
+<li>NEMA Module</li>
+</ol>
+<p>NTCIP8004-NEMA DEFINITIONS ::= BEGIN</p>
+<p>IMPORTS</p>
+<p>MODULE-IDENTITY, OBJECT-IDENTITY, enterprises</p>
+<p>FROM SNMPv2-<abbr title="Structure and Identification of Management Information">SMI</abbr>;</p>
+<p>-- <abbr title="Request for Comments">RFC</abbr> 2578</p>
+<p>nema MODULE-IDENTITY</p>
+<p>LAST-UPDATED \"202212120500Z\"</p>
+<p>ORGANIZATION \"NTCIP BSP2 WG\"</p>
+<p>CONTACT-INFO</p>
+<p>\"name: NTCIP Coordinator</p>
+<p>email: ntcip@nema.org</p>
+<p>postal: National Electrical Manufacturers Association</p>
+<p>1300 North 17th Street, Suite 1752</p>
+<p>Rosslyn, VA 22209-3801</p>
+<p>USA\"</p>
+<p>DESCRIPTION</p>
+<p>\"<abbr title="Internet Assigned Numbers Authority">IANA</abbr> delegated sub-identifier 1206 under the enterprise node to NEMA</p>
+<p>This MIB defines the overall structure of management information</p>
+<p>that is believed to be useful for a broad range of applications.\"</p>
+<p>REVISION \"202212120500Z\"</p>
+<p>DESCRIPTION</p>
+<p>\"Updated to SMIv2. Divided module into a separate NEMA managed parent</p>
+<p>module and an NTCIP managed module. \"</p>
+<p>REVISION \"200507190500Z\"</p>
+<p>DESCRIPTION \"MIB moved into NTCIP 8004 with updated module name.\"</p>
+<p>REVISION \"200112010500Z\"</p>
+<p>DESCRIPTION \"NEMA TS 3.2 republished as NTCIP 1101 v01.\"</p>
+<p>REVISION \"199610010500Z\"</p>
+<p>DESCRIPTION \"NEMA TS 3.2 approved.\"</p>
+<p>::= { enterprises 1206 }</p>
+<p>nemaMgmt OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"The mgmt subtree is used for standard NEMA <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>
+definitions</p>
+<p>that span different NEMA sections.\"</p>
+<p>::= { nema 1 }</p>
+<p>nemaExperimental OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"The experimental subtree is used to identify <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types
+used</p>
+<p>only on an experimental basis. Changing OBJECT IDENTIFIERs once assigned</p>
+<p>is challenging due to an installed base. Thus, this node should only be</p>
+<p>used for experiments, such as research efforts that are strictly limited</p>
+<p>to be short-term projects to investigate and test ideas. More permanent</p>
+<p>node assignments should be obtained prior to any longer-term or larger-</p>
+<p>scale deployment to prevent complications if, and when, the solution</p>
+<p>becomes more widely adopted.\"</p>
+<p>::= { nema 2 }</p>
+<p>expGlobal OBJECT-IDENTITY</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A node that contains the experimental auxiliary</p>
+<p>input/output objects.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.2.2\"</p>
+<p>::= {nemaExperimental 2}</p>
+<p>nemaPrivate OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"The private subtree is used to identify <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types defined
+unilaterally. NEMA assigns nodes to enterprises for purposes such as
+defining enterprise-specific MIB modules. A request for a node
+assignment can be sent to the NTCIP Coordinator at ntcip@nema.org. When
+a sub-node is assigned, the responsibility for managing that sub-node is
+transferred to the enterprise making the request.</p>
+<p>Upon receiving a node, the enterprise may, for example, define new MIB
+modules and <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types under this node. In addition, it is strongly
+recommended that the enterprise also register its transportation devices
+under this subtree, to provide an unambiguous identification mechanism
+for use in management protocols. For example, if the \"ABC, Inc.\"
+enterprise produced transportation devices, then it could request a node
+under the nemaPrivate node from NEMA. Such a node might be numbered:
+1.3.6.1.4.1.1206.3.99</p>
+<p>The \'ABC, Inc.\' enterprise might then register their \"Widget
+Controller\" under the name of 1.3.6.1.4.1.1206.3.99.1, ensuring a
+unique identification. Thereafter, each enterprise is responsible for
+ensuring unique identification of information objects within their
+subtree. NEMA delegates the role of assigning numbers under each
+nemaPrivate node to those to which they are assigned, except of course
+for the initial enterprise number.\"</p>
+<p>::= { nema 3 }</p>
+<p>END -- NTCIP8004-NEMA</p>
+<ol>
+<li>Transportation Module</li>
+</ol>
+<p>NTCIP8004-Transportation DEFINITIONS ::= BEGIN</p>
+<p>IMPORTS</p>
+<p>MODULE-IDENTITY, OBJECT-IDENTITY</p>
+<p>FROM SNMPv2-<abbr title="Structure and Identification of Management Information">SMI</abbr></p>
+<p>-- <abbr title="Request for Comments">RFC</abbr> 2578</p>
+<p>TEXTUAL-CONVENTION</p>
+<p>FROM SNMPv2-TC</p>
+<p>-- <abbr title="Request for Comments">RFC</abbr> 2579</p>
+<p>nema</p>
+<p>FROM NTCIP8004-NEMA;</p>
+<p>transportation MODULE-IDENTITY</p>
+<p>LAST-UPDATED \"202212120500Z\"</p>
+<p>ORGANIZATION \"NTCIP BSP2 WG\"</p>
+<p>CONTACT-INFO</p>
+<p>\"name: NTCIP Coordinator</p>
+<p>email: ntcip@nema.org</p>
+<p>postal: National Electrical Manufacturers Association</p>
+<p>1300 North 17th Street, Suite 1752</p>
+<p>Rosslyn, VA 22209-3801</p>
+<p>USA\"</p>
+<p>DESCRIPTION</p>
+<p>\"NEMA delegated its sub-identifier 4 to the Joint Committee on the
+NTCIP</p>
+<p>with its previously assigned descriptor of \'transportation\'. This MIB</p>
+<p>defines the overall structure of NTCIP-defined management information</p>
+<p>and textual conventions that are believed to be useful for a broad range</p>
+<p>of applications. \"</p>
+<p>REVISION \"202212120500Z\"</p>
+<p>DESCRIPTION</p>
+<p>\"Updated to SMIv2. Divided module into a separate NEMA managed parent</p>
+<p>module and an NTCIP managed module. Commented out most sub-identifiers,</p>
+<p>so that they can be assigned by the MODULE-IDENTITY macro within other</p>
+<p>NTCIP standards. Formalized textual conventions.\"</p>
+<p>REVISION \"200711290000Z\"</p>
+<p>DESCRIPTION \"Added tmdd and ntcipTraps nodes.\"</p>
+<p>REVISION \"200507190500Z\"</p>
+<p>DESCRIPTION \"MIB moved into NTCIP 8004 with updated module name and
+added</p>
+<p>nodes for chap, modem, and tmdd.\"</p>
+<p>REVISION \"200112010500Z\"</p>
+<p>DESCRIPTION \"NEMA TS 3.2 republished as NTCIP 1101 v01.\"</p>
+<p>REVISION \"199610010500Z\"</p>
+<p>DESCRIPTION \"NEMA TS 3.2 approved.\"</p>
+<p>::= { nema 4 }</p>
+<ol>
+<li>Nodal Structure</li>
+</ol>
+<!-- -->
+<ol>
+<li></li>
+</ol>
+<p>protocols OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node is the root of a subtree for <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr>-related</p>
+<p>management information, such as information related to 1) various layers</p>
+<p>of the <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr> stack, 2) profiles that cover several layers, 3) dynamic</p>
+<p><abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> management, and NTCIP traps.\"</p>
+<p>::= { transportation 1 }</p>
+<p>devices OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; This node is the root of a subtree for management</p>
+<p>information for various transportation devices. Management of this node</p>
+<p>is delegated to the NTCIP Base Standards, Protocols, and Profiles (BSP2)</p>
+<p>WG.</p>
+<p>\&lt;Informative&gt; The following assignments have been made under this node</p>
+<p>as formally declared (or to be declared upon upgrade to SMIv2) in the</p>
+<p>indicated standard:</p>
+<p>Node descriptor Defined in</p>
+<p>1 asc NTCIP 1202</p>
+<p>2 ramp NTCIP 1207</p>
+<p>3 dms NTCIP 1203</p>
+<p>4 tss NTCIP 1209</p>
+<p>5 ess NTCIP 1204</p>
+<p>6 global NTCIP 1201</p>
+<p>7 cctv NTCIP 1205</p>
+<p>8 cctvSwitch NTCIP 1208</p>
+<p>9 dcm NTCIP 1206</p>
+<p>10 ssm NTCIP 1210</p>
+<p>11 scp NTCIP 1211</p>
+<p>12 networkCamera \&lt;reserved&gt;</p>
+<p>13 elms NTCIP 1213</p>
+<p>17 saeNtcip NTCIP 1202</p>
+<p>18 rsu NTCIP 1218</p>
+<p>19 globalV2 NTCIP 1201\"</p>
+<p>::= { transportation 2 }</p>
+<p>tcip OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node has been assigned to the Transit Communications</p>
+<p>Interface Profiles Technical Working Group. Assignment of any nodes
+under</p>
+<p>this subtree is delegated to that group.\"</p>
+<p>::= { transportation 3 }</p>
+<p>tmdd OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node has been assigned to the ITE Traffic Management
+Data</p>
+<p>Dictionary Steering Committee. Assignment of any nodes under this
+subtree</p>
+<p>is delegated to that group.\"</p>
+<p>::= { transportation 4 }</p>
+<p>deviceAdmin OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node has been assigned for the definition of</p>
+<p>administrative data that is related to the other other nodes under the</p>
+<p>transportation node. Its sub-node structure is intended to parallel that</p>
+<p>of the transporation node.\"</p>
+<p>::= { devices 126 }</p>
+<p>--
+**************************************************************************</p>
+<p>-- Protocols branch of tree</p>
+<p>--
+**************************************************************************</p>
+<p>layers OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; This node contains management information related to</p>
+<p>various layers of the <abbr title="Open Systems Interconnection">OSI</abbr> <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr> stack.</p>
+<p>\&lt;Informative&gt; The following subnodes have</p>
+<p>been defined:</p>
+<p>Node Descriptor</p>
+<blockquote>
+<p>1 chap</p>
+<p>2 modem</p>
+<p>7 application\"</p>
+</blockquote>
+<p>::= { protocols 1 }</p>
+<p>application OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node contains management information related to</p>
+<p>protocols assigned to the application layer of the <abbr title="Open Systems Interconnection">OSI</abbr> stack.\"</p>
+<p>::= { layers 7 }</p>
+<p>profiles OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node contains management information related to
+profiles</p>
+<p>that cover several layers of the <abbr title="Open Systems Interconnection">OSI</abbr> stack.\"</p>
+<p>::= { protocols 2 }</p>
+<p>ntcipTraps OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node contains management information related to NTCIP</p>
+<p>notifications, which include traps and informs. The name of this node</p>
+<p>reflects its origin in SNMPv1, which only supported traps. The original</p>
+<p>traps defined by NTCIP are planned to be <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in favor of the</p>
+<p>SNMPv3 notifications defined in ISO 20684-4, but this node is still</p>
+<p>current and new NTCIP notifications can be defined as needed.\"</p>
+<p>::= { protocols 4 }</p>
+<p>ntcipSmi OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"A node used to manage information related to the NTCIP
+<abbr title="Structure and Identification of Management Information">SMI</abbr>.\"</p>
+<p>::= { protocols 5 }</p>
+<ol>
+<li>Common Textual Conventions</li>
+</ol>
+<p>-- MIB developers should use textual conventions to the extent possible
+so</p>
+<p>-- that 1) associated semantics can be automated and code easily
+reused, and</p>
+<p>-- 2) generic <abbr title="Simple Network Management Protocol version 3">SNMP</abbr> implementations are guided on how to present values
+to</p>
+<p>-- users. The following lists/defines several textual conventions that
+are</p>
+<p>-- most widely used. The list also includes some of the APPLICATION
+types</p>
+<p>-- defined in <abbr title="Request for Comments">RFC</abbr> 2578 for a more complete reference set.</p>
+<p>-- MIB developers are also encouraged to consider the textual
+conventions</p>
+<p>-- listed at https://trac.ietf.org/trac/ops/wiki/mib-common-tcs, which
+is</p>
+<p>-- maintained with all <abbr title="Internet Engineering Task Force">IETF</abbr> defined conventions.</p>
+<p>--
+**************************************************************************</p>
+<p>-- Integers</p>
+<p>--
+**************************************************************************</p>
+<p>-- \"Byte\", \"Ubyte\", \"Short\", \"Ushort\", and \"Long\" were
+defined in</p>
+<p>-- NTCIP8004v02, but have identical ranges to the following defined
+textual</p>
+<p>-- conventions defined in ISO 20684-1, which should be used instead</p>
+<p>-- From FIELD-DEVICE-TC-MIB</p>
+<p>-- @ https://standards.iso.org/iso/20684/-1/ed-2/en/iso20684-1-tc.mib</p>
+<p>-- ITSInteger8: Replaces NTCIP8004v02 \"Byte\"</p>
+<p>-- ITSInteger16: Replaces NTCIP8004v02 \"Short\"</p>
+<p>-- ITSPositive8</p>
+<p>-- ITSPositive16</p>
+<p>-- ITSPositive32</p>
+<p>-- ITSUnsigned8: Replaces NTCIP8004v02 \"Ubyte\"</p>
+<p>-- ITSUnsigned16: Replaces NTCIP8004v02 \"Ushort\"</p>
+<p>-- From SNMPv2-<abbr title="Structure and Identification of Management Information">SMI</abbr></p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 2578</p>
+<p>-- Integer32: Replaces NTCIP8004v02 \"Long\" and \"INTEGER\", both</p>
+<p>-- of which have identical ranges</p>
+<p>-- Unsigned32</p>
+<p>NtcipPercent ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"d\"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; An expression of a percentage from 0 to 100 contained
+in</p>
+<p>an Integer32 type.</p>
+<p>\&lt;Informative&gt; This textual convention is defined to support values</p>
+<p>converted from the SNMPv1 INTEGER type; new objects should use</p>
+<p>ITSPercent as defined in ISO 20684-1, which is based on Unsigned32.\"</p>
+<p>SYNTAX Integer32 (0..100)</p>
+<p>--
+**************************************************************************</p>
+<p>-- Counters and Gauges</p>
+<p>--
+**************************************************************************</p>
+<p>-- From FIELD-DEVICE-TC-MIB</p>
+<p>-- @ https://standards.iso.org/iso/20684/-1/ed-2/en/iso20684-1-tc.mib</p>
+<p>-- ITSCounter8: 8-bit, zero-based, resetable</p>
+<p>-- ITSCounter16: 16-bit, zero-based, resetable</p>
+<p>-- ITSCounter32: 32-bit, zero-based, resetable</p>
+<p>-- ITSCounter64: 64-bit, zero-based, resetable</p>
+<p>-- ITSGauge8: 8-bit gauge</p>
+<p>-- ITSGauge16: 16-bit gauge</p>
+<p>-- From SNMPv2-<abbr title="Structure and Identification of Management Information">SMI</abbr></p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 2578</p>
+<p>-- Counter32 32-bit, random base, non-resetable</p>
+<p>-- Counter64 64-bit, random base, non-resetable</p>
+<p>-- Gauge32 32-bit gauge</p>
+<p>-- From RMON2-MIB</p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 2021</p>
+<p>-- ZeroBasedCounter32 32-bit, zero-based, non-resetable</p>
+<p>-- From HCNUM-TC</p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 2856</p>
+<p>-- ZeroBasedCounter64 64-bit, zero-based, non-resetable</p>
+<p>-- CounterBasedGauge64 64-bit gauge</p>
+<p>--
+**************************************************************************</p>
+<p>-- Date/Time</p>
+<p>--
+**************************************************************************</p>
+<p>-- From FIELD-DEVICE-TC-MIB</p>
+<p>-- @ https://standards.iso.org/iso/20684/-1/ed-2/en/iso20684-1-tc.mib</p>
+<p>-- ITSDailyTimeStamp</p>
+<p>-- ITSDateStamp</p>
+<p>-- ITSDayOfMonth</p>
+<p>-- ITSDayOfWeek</p>
+<p>-- ITSMonth</p>
+<p>--
+**************************************************************************</p>
+<p>-- Other Enumerations</p>
+<p>--
+**************************************************************************</p>
+<p>-- From SNMPv2-TC</p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 2579</p>
+<p>-- TruthValue</p>
+<p>-- TestAndIncr</p>
+<p>-- RowStatus</p>
+<p>-- StorageType</p>
+<p>-- From FIELD-DEVICE-TC-MIB</p>
+<p>-- @ https://standards.iso.org/iso/20684/-1/ed-2/en/iso20684-1-tc.mib</p>
+<p>-- ITSPduErrorStatus</p>
+<p>-- ITSUnits</p>
+<p>NtcipRowStatusStatic ::= TEXTUAL-CONVENTION</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;RowStatusStatic has four states and two commands
+associated</p>
+<p>with it.</p>
+<p>\&lt;Format&gt; The four possible states are defined as:</p>
+<p>1) other: The status is controlled or defined by a <abbr title="person using the system that is developed.">user</abbr>- or</p>
+<p>manufacturer-specific <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>.</p>
+<p>2) standby: All columnar data in the row have passed (any) defined</p>
+<p>consistency checks but are not to be used by the end application.</p>
+<p>3) available: All columnar data in the row have passed (any) defined</p>
+<p>consistency checks and are available to be used by the end</p>
+<p>application.</p>
+<p>4) invalid: One or more columnar objects has a value that caused the</p>
+<p>row to fail at least one defined consistency check.</p>
+<p>Setting RowStatusStatic equal to one of the above values shall return</p>
+<p>an error (e.g., \'wrongValue\' in SNMPv3).</p>
+<p>The only two possible command values that may be set by a management</p>
+<p>application are:</p>
+<p>5) activate: Makes the columnar data in the row available for use by</p>
+<p>the end application.</p>
+<p>6) deactivate: Makes the columnar data in the row unavailable for use</p>
+<p>by the end application.</p>
+<p>\&lt;Informative&gt; In a static table, all rows exist irrespective of
+whether</p>
+<p>the columnar objects contain appropriate values. The value of a</p>
+<p>columnar <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> within a row may be inappropriate when the values of</p>
+<p>other columnar objects in the row are considered. An entire row itself</p>
+<p>may also be considered inappropriate under some circumstances. If this</p>
+<p>is the case, a static table shall include an additional columnar <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr></p>
+<p>that defines row status and has the SYNTAX of RowStatusStatic.</p>
+<p><abbr title="Unified Modeling Language">UML</abbr> state transition diagrams for RowStatusStatic are defined in NTCIP</p>
+<p>8004.</p>
+<p>RowStatusStatic was <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in NTCIP8004v03.01 in favor of RowStatus,</p>
+<p>which allows implementations to create rows when needed and to destroy</p>
+<p>them when not needed. This allows the potential for better memory</p>
+<p>management in implementations that wish to provide this capability.\"</p>
+<p>SYNTAX INTEGER { other (1), standby (2), available (3),</p>
+<p>invalid (4),</p>
+<p>activate (5),</p>
+<p>deactivate (6)}</p>
+<p>--
+**************************************************************************</p>
+<p>-- Bitmaps</p>
+<p>--
+**************************************************************************</p>
+<p>-- New objects should use \"BITS\", unless 1) there is a need to
+conserve the</p>
+<p>-- extra bits and 2) there is confidence that the <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> will never
+need to</p>
+<p>-- expand to a larger value.</p>
+<p>NtcipOctetBitmap8 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1x\"</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A bitmap of up to 8 bits with Bit 0 in the low-order
+bit.</p>
+<p>When a bit is on (1), the indicated feature is on or supported; when a</p>
+<p>bit is off (0), the indicated feature is off or not supported.</p>
+<p>\&lt;Informative&gt; This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> orders the bits in the reverse order of the</p>
+<p>BITS construct but in the same order as used by INTEGERs .\"</p>
+<p>SYNTAX OCTET STRING (SIZE (1))</p>
+<p>NtcipOctetBitmap16 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1x \"</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 16 bits with Bit 0 in the low-order
+bit of</p>
+<p>the trailing octet and Bit 15 in the high-order bit of the first octet.</p>
+<p>When a bit is on (1), the indicated feature is on or supported; when a</p>
+<p>bit is off (0), the indicated feature is off or not supported.</p>
+<p>\&lt;Informative&gt; This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> orders the bits in the reverse order of the</p>
+<p>BITS construct but in the same order as used by INTEGERs. \"</p>
+<p>SYNTAX OCTET STRING (SIZE (2))</p>
+<p>NtcipOctetBitmap32 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1x \"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 32 bits with Bit 0 in the low-order
+bit of</p>
+<p>the trailing octet and Bit 31 in the high-order bit of the first octet.</p>
+<p>When a bit is on (1), the indicated feature is on or supported; when a</p>
+<p>bit is off (0), the indicated feature is off or not supported.</p>
+<p>\&lt;Informative&gt;This has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in favor of the <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>-standard
+BITS</p>
+<p>construct, which orders the bits in the reverse order and allows for</p>
+<p>growth in a bit field.\"</p>
+<p>SYNTAX OCTET STRING (SIZE (4))</p>
+<p>NtcipOctetBitmap512 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1x \"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 512 bits (64 octets) with Bit 0 in the
+low-</p>
+<p>order bit of the trailing octet, Bit 1 in the second lowest-order bit</p>
+<p>of the trailing octet, etc. until all numbered bits are presented. If</p>
+<p>the number of bits is not divisible by eight, the high-order bits of</p>
+<p>the first octet shall be padded as necessary but in no case shall there</p>
+<p>be more than seven pad bits (i.e., the length of the octet string may</p>
+<p>be less than 64 octets).</p>
+<p>When a bit is on (1), the indicated feature is on or supported; when a</p>
+<p>bit is off (0), the indicated feature is off or not supported.</p>
+<p>\&lt;Informative&gt;This has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in favor of the <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>-standard
+BITS</p>
+<p>construct, which orders the bits in the reverse order and allows for</p>
+<p>growth in a bit field.\"</p>
+<p>SYNTAX OCTET STRING (SIZE (0..64))</p>
+<p>NtcipOctetBitmap2040 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1x \"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 2040 bits (255 octets) with Bit 0 in
+the</p>
+<p>low-order bit of the trailing octet, Bit 1 in the second lowest-order</p>
+<p>bit of the trailing octet, etc. until all numbered bits are presented.</p>
+<p>If the number of bits is not divisible by eight, the high-order bits of</p>
+<p>the first octet shall be padded as necessary but in no case shall there</p>
+<p>be more than seven pad bits (i.e., the length of the octet string may</p>
+<p>be less than 255 octets).</p>
+<p>When a bit is set (1), the indicated feature/error is on, active,</p>
+<p>supported (as defined by the <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> using this textual convention);</p>
+<p>when a bit is not set (0), the indicated feature/error is off, not</p>
+<p>active, or not supported.</p>
+<p>\&lt;Informative&gt;This has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in favor of the <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>-standard
+BITS</p>
+<p>construct, which orders the bits in the reverse order and allows for</p>
+<p>growth in a bit field.\"</p>
+<p>SYNTAX OCTET STRING (SIZE (0..255))</p>
+<p>NtcipOctetBitmap3200 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1x \"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 3200 bits (400 octets) with the
+meaning of</p>
+<p>bits defined by the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> but in no case shall there be more than</p>
+<p>seven pad bits (i.e., the length of the octet string may be less than</p>
+<p>400 octets).</p>
+<p>When a bit is set (1), the indicated feature/error is on, active,</p>
+<p>supported (as defined by the <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> using this textual convention);</p>
+<p>when a bit is not set (0), the indicated feature/error is off, not</p>
+<p>active, or not supported.</p>
+<p>\&lt;Informative&gt;This has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in favor of the <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>-standard
+BITS</p>
+<p>construct, which orders the bits in the reverse order and allows for</p>
+<p>growth in a bit field.\"</p>
+<p>SYNTAX OCTET STRING (SIZE (1..400))</p>
+<p>NtcipIntegerBitmap8 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1o\"</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A bitmap of up to 8 bits with Bit 0 in the low-order
+bit.</p>
+<p>\&lt;Informative&gt; This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> orders the bits in the reverse order of the</p>
+<p>BITS construct but in the same order as used by INTEGERs.\"</p>
+<p>SYNTAX Integer32 (0..255)</p>
+<p>NtcipIntegerBitmap16 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"2o\"</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 16 bits with Bit 0 in the low-order
+bit of</p>
+<p>the trailing octet.</p>
+<p>\&lt;Informative&gt; This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> orders the bits in the reverse order of the</p>
+<p>BITS construct but in the same order as used by INTEGERs.\"</p>
+<p>SYNTAX Integer32 (0..65535)</p>
+<p>NtcipIntegerBitmap31 ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"4o\"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;A bitmap of up to 31 bits with Bit 0 in the low-order
+bit of</p>
+<p>the trailing octet.</p>
+<p>\&lt;Informative&gt;This has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> in favor of the <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>-standard
+BITS</p>
+<p>construct, which orders the bits in the reverse order and allows for</p>
+<p>growth in a bit field. Prior versions of NTCIP sometimes indicated a</p>
+<p>value for Bit 31 (i.e., the high-order bit) with an unsigned range on</p>
+<p>INTEGER; this was a technically invalid definition and resulted in</p>
+<p>ambiguities as to whether it should be encoded in 4 octets (which is</p>
+<p>technically a signed value, or 5 octets, which many off-the-shelf <abbr title="Simple Network Management Protocol version 3">SNMP</abbr></p>
+<p>engines do not support. As a result, implementation response to a value</p>
+<p>that uses Bit 31 is undefined and should be avoided; however, this</p>
+<p><abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> TEXTUAL-CONVENTION allows use of Bit 31 and standardizes</p>
+<p>its presentation as a signed value encoded in four octets.\"</p>
+<p>SYNTAX Integer32</p>
+<p>--
+**************************************************************************</p>
+<p>-- Text</p>
+<p>--
+**************************************************************************</p>
+<p>-- From <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>-FRAMEWORK-MIB</p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 3411</p>
+<p>-- SnmpAdminString: UTF8 String 0..255 octets</p>
+<p>NtcipOwnerString ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"127t\"</p>
+<p>STATUS <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt;This data type is used to model an administratively
+assigned</p>
+<p>name of the owner of a resource, preferably in human-readable form.</p>
+<p>The string is encoded in UTF-8. It is suggested that this name contain</p>
+<p>one or more of the following: management station name, manager's name,</p>
+<p>location or phone number.</p>
+<p>\&lt;Informative&gt; Versions prior to 2023 limited this textual convention
+to</p>
+<p>the <abbr title="Network Virtual Terminal">NVT</abbr> <abbr title="American National Standard Code for Information Interchange">ASCII</abbr> character set; however, the range was expanded to allow</p>
+<p>for more language support and UTF-8 is fully compatible with <abbr title="Network Virtual Terminal">NVT</abbr></p>
+<p><abbr title="American National Standard Code for Information Interchange">ASCII</abbr>. This textual convention has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> as there is seldom a</p>
+<p>need to force a limit of 127 characters (as this convention does)</p>
+<p>rather than 255 chaaracters (as SnmpAdminString does). \"</p>
+<p>SYNTAX OCTET STRING (SIZE (0..127))--
+**************************************************************************</p>
+<p>-- Other OCTET STRING conventions</p>
+<p>--
+**************************************************************************</p>
+<p>-- From FIELD-DEVICE-TC-MIB</p>
+<p>-- @ https://standards.iso.org/iso/20684/-1/ed-1/en/iso20684-1-1-a.mib</p>
+<p>-- ITSOerString</p>
+<p>NtcipTwoColors ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"1dR1dG1dB1dR1dG1dB\"</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"A 6-octet value representing two colors, each encoded as a 3-octet RGB</p>
+<p>value.\"</p>
+<p>SYNTAX OCTET STRING (SIZE(6))</p>
+<p>--
+**************************************************************************</p>
+<p>-- <abbr title="unique name (identifier) that is associated with each type of object in a MIB that is a defined ASN.1 type.">OBJECT IDENTIFIER</abbr> conventions</p>
+<p>--
+**************************************************************************</p>
+<p>-- From SNMPv2-TC</p>
+<p>-- @ <abbr title="Request for Comments">RFC</abbr> 2579</p>
+<p>-- AutonomousType</p>
+<p>-- VariablePointer</p>
+<p>-- RowPointer</p>
+<p>END -- NTCIP8004-Transportation</p>
+<h1 class="ANNEX-heading1" id="conversion-from-smiv1-to-smiv2-normative">Conversion From SMIv1 To SMIv2 [Normative]<a class="headerlink" href="#conversion-from-smiv1-to-smiv2-normative" title="Permanent link">¶</a></h1>
+<p>The following defines additional requirements notes that apply to NTCIP
+modules being converted from SMIv1 to SMIv2.</p>
+<ol>
+<li>
+<p>The value assigned in the SMIv2 MAX-ACCESS clause shall be
+    consistent with the previous SMIv1 ACCESS clause (i.e., it must
+    provide greater or equal access)</p>
+</li>
+<li>
+<p>The value assigned in the MAX-ACCESS clause shall be "read-create",
+    if the previous ACCESS clause indicated "read-write" and the table
+    supports row creation</p>
+</li>
+<li>
+<p>The STATUS clause shall be updated to reflect the SMIv2 validity of
+    the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> rather than the SMIv1 optionality of the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr>
+    (e.g., change \"mandatory\" and \"optional\" to \"current\")</p>
+</li>
+<li>
+<p>The \&lt;Units&gt; subclause from the NTCIP SMIv1 conventions shall be
+    converted to the SMIv2 UNITS clause</p>
+</li>
+<li>
+<p>Each TRAP-TYPE macro shall be converted to a NOTIFICATION-TYPE macro
+    per the rules of <abbr title="Request for Comments">RFC</abbr> 3584 Clause 2.1.2</p>
+</li>
+<li>
+<p>A NOTIFICATION-TYPE that is being converted from an SMIv1 TRAP-TYPE
+    shall be assigned an <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> identifier that equates to the
+    TRAP-TYPE\'s ENTERPRISE clause followed by a zero and followed by
+    the value assigned to the SMIv1 TRAP-TYPE.</p>
+</li>
+<li>
+<p>Deprecating <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types on the basis of converting to
+    <abbr title="Internet Engineering Task Force">IETF</abbr>-recognized textual conventions (e.g., INTEGER to Gauge32) is
+    encouraged when the textual conventions provide significant
+    additional semantics that off-the-shelf tools can benefit from</p>
+</li>
+<li>
+<p>Converting from Counter to Counter32 requires ensuring that the
+    semantics defined in <abbr title="Request for Comments">RFC</abbr> 2578 Clause 7.1.6 are satisfied</p>
+</li>
+<li>
+<p>The SYNTAX of an <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> shall not be changed in a way that
+    modifies the data type when encoded using BERor <abbr title="Octet Encoding Rules, as defined by ITU-T X.696 (ISO/IEC 8825-7)">OER</abbr>. When necessary,
+    the existing <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> can be <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> and replaced with a new
+    <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>. The following conversions (among others) are prohibited
+    based on this rule:</p>
+<p>a.  INTEGER to Unsigned32</p>
+<p>b.  INTEGER to Counter32</p>
+<p>c.  INTEGER to Gauge32</p>
+<p>d.  Counter to ZeroBasedCounter32</p>
+<p>e.  Counter to Counter64</p>
+<p>f.  Counter to ZeroBasedCounter64</p>
+</li>
+<li>
+<p>The counter-based timekeeping solution used by globalTime is not
+    conformant with SNMPv3 and shall be <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr>. When time-related
+    <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types need to be defined (e.g., a timestamp), they should be
+    based on the textual conventions defined in ISO 20684-1.</p>
+</li>
+<li>
+<p>Developers should consider migrating <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types that represent
+    general sensor data to the general-purpose input/output feature of
+    ISO 20684-2 if and when any backwards <abbr title="ability of two or more systems or components to exchange information \[ISO/IEC/IEEE 24765\]">compatibility</abbr> issues arise.</p>
+</li>
+</ol>
+<h1 class="ANNEX-heading1" id="macro-examples-informative">Macro Examples [Informative]<a class="headerlink" href="#macro-examples-informative" title="Permanent link">¶</a></h1>
+<p>The following examples provide various examples of properly formatted
+invocations of the macros discussed by this document.</p>
+<p>NOTE---While the macros shown are similar to real invocations, the
+details are frequently shortened to save space and the macros often
+represent translations of SMIv1 entities for which the indicated SMIv2
+translations have not yet been approved. The examples within this annex
+are strictly informative and provided as examples, they should not be
+interpreted as standardized information. To prevent any confusion, the
+formal OIDs in this section are shown with a parent node of \"example\".</p>
+<ol>
+<li>Module Identity Macro</li>
+</ol>
+<p>transportation MODULE-IDENTITY</p>
+<p>LAST-UPDATED \"202212120500Z\"</p>
+<p>ORGANIZATION \"NTCIP BSP2 WG\"</p>
+<p>CONTACT-INFO</p>
+<p>\"name: NTCIP Coordinator</p>
+<p>email: ntcip@nema.org</p>
+<p>postal: National Electrical Manufacturers Association</p>
+<p>1300 North 17th Street, Suite 1752</p>
+<p>Rosslyn, VA 22209-3801</p>
+<p>USA\"</p>
+<p>DESCRIPTION</p>
+<p>\"NEMA delegated its sub-identifier 4 to the Joint Committee on the
+NTCIP</p>
+<p>with its previously assigned descriptor of \'transportation\'. This MIB</p>
+<p>defines the overall structure of NTCIP-defined management information</p>
+<p>and textual conventions that are believed to be useful for a broad range</p>
+<p>of applications.\"</p>
+<p>REVISION \"202212120500Z\"</p>
+<p>DESCRIPTION</p>
+<p>\"Updated to SMIv2. Divided module into a separate NEMA managed parent</p>
+<p>module and an NTCIP managed module. Commented out most sub-identifiers,</p>
+<p>so that they can be assigned by the MODULE-IDENTITY macro within other</p>
+<p>NTCIP standards. Formalized textual conventions.\"</p>
+<p>REVISION \"200711290000Z\"</p>
+<p>DESCRIPTION \"Added tmdd and ntcipTraps nodes.\"</p>
+<p>REVISION \"200507190500Z\"</p>
+<p>DESCRIPTION \"MIB moved into NTCIP 8004 with updated module name and
+added</p>
+<p>nodes for chap, modem, and tmdd.\"</p>
+<p>REVISION \"200112010500Z\"</p>
+<p>DESCRIPTION \"NEMA TS 3.2 republished as NTCIP 1101 v01.\"</p>
+<p>REVISION \"199610010500Z\"</p>
+<p>DESCRIPTION \"NEMA TS 3.2 approved.\"</p>
+<p>::= { example 1}</p>
+<ol>
+<li>Object Identity Macro</li>
+</ol>
+<p>protocols OBJECT-IDENTITY</p>
+<p>STATUS current</p>
+<p>DESCRIPTION \"This node is the root of a subtree for <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr>-related</p>
+<p>management information, such as information related to 1) various layers</p>
+<p>of the <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr> stack, 2) profiles that cover several layers, 3) dynamic</p>
+<p><abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> management, and NTCIP traps.\"</p>
+<p>::= { example 2 }</p>
+<ol>
+<li>Conceptual Table Object Type</li>
+</ol>
+<p>phaseTable <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX SEQUENCE OF PhaseEntry</p>
+<p>MAX-ACCESS not-accessible</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A table containing Controller Unit phase parameters.
+The number of rows in this table is equal to the maxPhases <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>.</p>
+<p>\&lt;TableType&gt; static</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.x.1.2\"</p>
+<p>::= { example 3 }</p>
+<ol>
+<li>Conceptual Row Object Type</li>
+</ol>
+<p>phaseEntry <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX PhaseEntry</p>
+<p>MAX-ACCESS not-accessible</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; Parameters for a specific Controller Unit phase.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.x.1.2.1\"</p>
+<p>INDEX { phaseNumber }</p>
+<p>::= { example 4 }</p>
+<p>PhaseEntry ::= SEQUENCE {</p>
+<p>phaseNumber Integer32,</p>
+<p>phaseWalk Integer32,</p>
+<p>phasePedestrianClear Integer32,</p>
+<p>phaseMinimumGreen Integer32,</p>
+<p>phaseYellowChange Integer32,</p>
+<p>phaseRedClear Integer32 }</p>
+<ol>
+<li>Row Status Object Type</li>
+</ol>
+<p>vacmAccessStatus <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX RowStatus</p>
+<p>MAX-ACCESS read-create</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; The status of this conceptual row.</p>
+<p>The RowStatus TC [RFC2579] requires that this</p>
+<p>DESCRIPTION clause states under which circumstances</p>
+<p>other objects in this row can be modified:</p>
+<p>The value of this <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> has no effect on whether</p>
+<p>other objects in this conceptual row can be modified.</p>
+<p>\&lt; Object Identifier &gt; 1.3.6.1.6.3.16.1.4.1.9\"</p>
+<p>::= { example 5 }</p>
+<ol>
+<li>Enumeration</li>
+</ol>
+<p>dmsMemoryMgmt <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX INTEGER {</p>
+<p>other (1), -- <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr></p>
+<p>normal (2),</p>
+<p>clearChangeableMessages (3),</p>
+<p>clearVolatileMessages (4) }\
+MAX-ACCESS read-write\
+STATUS mandatory\
+DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; Allows the system to manage the device\'s memory. <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>
+Get operations on this <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> should always return normal (2).</p>
+<p>clearChangeableMessages (3): the controller shall set dmsMessageStatus
+for all changeable messages to notUsed (1), and release all memory
+associated with changeable messages. This action does not affect any
+changeable graphics or fonts.</p>
+<p>clearVolatileMessages (4): the controller shall set dmsMessageStatus for
+all volatile messages to notUsed (1), and release all memory associated
+with volatile messages. This action does not affect any changeable
+graphics or fonts.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.6.16\"</p>
+<p>DEFVAL {normal}\
+::= { example 6 }</p>
+<ol>
+<li>Integer32</li>
+</ol>
+<p>maxPhases <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX Integer32 (2..255)</p>
+<p>UNITS \"phase\"</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; The Maximum Number of Phases this Controller Unit
+supports. This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> indicates the maximum rows which shall appear in
+the phaseTable <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.1.1.1\"</p>
+<p>::= { example 7 }</p>
+<ol>
+<li>Gauge32</li>
+</ol>
+<p>dcmBatteryVoltage <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX Gauge32 (0..255)</p>
+<p>UNITS \"tenths of volts\"</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; Indicates the voltage of the battery at the time of the
+request. The value range shall be 00.0-25.5V in 0.1 increments.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.9.2.2\"</p>
+<p>::= {example 8}</p>
+<ol>
+<li>Counter32</li>
+</ol>
+<p>dcmVehicleSeqNum <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX Counter32 (0..65535)</p>
+<p>MAX-ACCESS not-accessible</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A number assigned to each vehicle that traverses a
+sensor array. The numbers are assigned sequentially over all sensor
+arrays. The starting value is not defined and the value shall roll over
+to a value of 0 after reaching the maximum. This number along with a
+time tag (controller-localTime) is used to uniquely identify vehicles.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.9.1.26\"</p>
+<p>::= {example 9}</p>
+<ol>
+<li>Unsigned32</li>
+</ol>
+<p>dmsSignWidth <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX Unsigned32 (0..65535)</p>
+<p>UNITS \"millimeters\"</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; Indicates the sign width in millimeters including the
+border (dmsHorizontalBorder).</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.1.4\"</p>
+<p>::= { example 10 }</p>
+<ol>
+<li>Object Identifier</li>
+</ol>
+<p>dcmVCOID <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX InstancePointer</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; This field contains the OID of a Vehicle Criteria
+<abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> that is supported by this device. The OID specified must be a
+full OID from the root of the iso tree, relative OID's cannot be used.
+This allows referring to objects outside of this MIB. The specified OID
+can also be an OID from a table (if the <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> is only defined within a
+table (e.g. Array Number), but it shall be the OID of the <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> from
+the table in which the specified <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> is defined (e.g. if Array Number
+is to be used, the OID shall be taken from the Logical IO To Array Map
+Table.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.1.4\"</p>
+<p>::= {example 11 }</p>
+<ol>
+<li>BITS</li>
+</ol>
+<p>systemCameraEquipped <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX BITS { cameraPower (0),</p>
+<p>heaterPower (1),</p>
+<p>wiper (2),</p>
+<p>washer (3),</p>
+<p>blower (4) }</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A bit mapped value as defined below:</p>
+<p>Bit When set, denotes the availability of a controllable:</p>
+<p>0 Camera Power supply,</p>
+<p>1 Heater Power supply,</p>
+<p>2 Wiper,</p>
+<p>3 Washer,</p>
+<p>4 Blower</p>
+<p>All other bits reserved.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.7.5.3\"</p>
+<p>::= {example 12}</p>
+<ol>
+<li>Internet Address</li>
+</ol>
+<p>intersectionAddressType <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX InetAddressType</p>
+<p>ACCESS read-write</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> identifies the type of address stored in
+intersectionAddress.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.10.2.2.1.13\"</p>
+<p>DEFVAL { ipv4 }</p>
+<p>::= { example 13 }</p>
+<p>intersectionAddress <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX InetAddress</p>
+<p>ACCESS read-write</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; This <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> provides the Internet address for the entry
+and shall be a unicast address.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.10.2.2.1.2\"</p>
+<p>DEFVAL { \'00000000\'h }</p>
+<p>::= { example 13 }</p>
+<ol>
+<li>Text</li>
+</ol>
+<p>fontName <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX SnmpAdminString (SIZE (0..64))</p>
+<p>MAX-ACCESS read-write</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; Indicates the name of the font.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.3.2.1.3\"</p>
+<p>::= { example 14 }</p>
+<ol>
+<li>Textual Convention Macro</li>
+</ol>
+<p>MessageActivationCode ::= TEXTUAL-CONVENTION</p>
+<p>DISPLAY-HINT \"2dm1dp1dt2dn2xc1d.1d.1d.1d\"</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"The MessageActivationCode consists of those parameters required to
+activate a message on a DMS. It is defined as an OCTET STRING containing
+the <abbr title="Octet Encoding Rules, as defined by ITU-T X.696 (ISO/IEC 8825-7)">OER</abbr>-encoding of the following <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure:</p>
+<p>MessageActivationCodeStructure ::= SEQUENCE -- {</p>
+<p>duration INTEGER (0..65535),</p>
+<p>activatePriority INTEGER (0..255),</p>
+<p>messageMemoryType INTEGER (0..255),</p>
+<p>messageNumber INTEGER (0..65535),</p>
+<p>messageCRC OCTET STRING (SIZE (2)),</p>
+<p>sourceAddress OCTET STRING (SIZE (4))</p>
+<p>}</p>
+<p>where,\
+duration = the maximum amount of time, in minutes, the message may be
+displayed prior to activating the dmsDefaultEndDurationMessage.
+dmsMessageTimeRemaining shall be set to this value upon successful
+display of the indicated message. A value of 65535 shall indicate an
+infinite duration.\
+\
+activatePriority = the activation priority of the message. If this value
+is greater than or equal to the dmsMessageRunTimePriority of the
+currently displayed message, the new message shall be displayed unless
+errors are detected.\
+\
+messageMemoryType = the dmsMessageMemoryType of the desired message.\
+\
+messageNumber = the dmsMessageNumber of the desired message.\
+\
+messageCRC = the dmsMessageCRC of the desired message.\
+\
+sourceAddress = the 4-byte IPv4 address of the device that requested the
+activation.</p>
+<p>For example, given the MULTI string \'[jp3]TEST
+[fl]Flashing[/fl]\', stored in volatile memory slot 5 with no
+beacons and no pixel service, the message ID Code is '04 00 05 95 F9'.
+If this message is to be displayed for 267 minutes with activation
+priority 55 from <abbr title="Internet Protocol">IP</abbr> address 103.8.9.10, the message Activation Code is
+-- \'01 0B 37 04 00 05 95 F9 67 08 09 0A\' in hex and would be displayed
+to a <abbr title="person using the system that is developed.">user</abbr> as the following based on the DISPLAY-HINT:
+\'267m55p4t5n95F9c103.8.9.10\'. \"</p>
+<p>SYNTAX OCTET STRING (SIZE 12))</p>
+<ol>
+<li>Block Object Using Identifier and Type</li>
+</ol>
+<p>As defined in Section 4.5.4, the definition of a Block Object consists
+of two parts:</p>
+<ol>
+<li>
+<p>The <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr> macro used for all <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types and</p>
+</li>
+<li>
+<p>A definition of the data structure using a slightly modified version
+    of <abbr title="Abstract Syntax Notation One, as defined by ITU-T X.680 (ISO/IEC 8824-1)">X.680 ASN.1</abbr>, as defined in Clause 4.5.4.2; this definition can be
+    placed in a TEXTUAL-CONVENTION, in the \&lt;Definition&gt; subclause of
+    the <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr> macro, or in a location external to the <abbr title="sequence of NVT ASCII characters conforming to X.208 Abstract Syntax Notation One (ASN.1) and IAB STD 58. MIB modules are used to define the data objects that are to make up the instantiated objects of the MIB. NOTE---A MIB module can be, and within NTCIP   typically is, presented as both part of a standard and as a stand-alone, computer-readable text file.">MIB module</abbr>
+    and referenced.</p>
+</li>
+</ol>
+<p>The following uses the textual convention defined in Clause C.15.</p>
+<p>dmsActivateMessage <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX MessageActivationCode</p>
+<p>MAX-ACCESS read-write</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; A code indicating the active message. The value of this
+<abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> may be SET by a management station or modified by logic internal
+to the DMS (e.g., activation of the end duration message, etc.).</p>
+<p>When modified by internal logic with a reference to a message ID code,
+the duration indicates 65535 (infinite), the activate priority indicates
+255, and the source address indicates an address of 127.0.0.1.</p>
+<p>If a GET is performed on this <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>, the DMS shall respond with the
+value for the last message that was successfully activated.</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.6.3\"</p>
+<p>::= { example 16 }</p>
+<ol>
+<li>Block Object Using Value Reference and a Defined Value</li>
+</ol>
+<p>In the following example, because the fields within the <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure
+are optional, a more meaningful value of DISPLAY-HINT cannot be
+provided. As a result, the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> macro references the
+ITSOerString.</p>
+<p>The reference to \"essNtcipCategory.0\" is an example of a
+valuereference that uses a number as an index.
+essTemperatureSensorHeight.x\" is an example of a valuereference that
+uses a DefinedValue as an index.</p>
+<p>essStationMetaDataBlock <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX ITSOerString</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"\&lt;Definition&gt; The <abbr title="Octet Encoding Rules, as defined by ITU-T X.696 (ISO/IEC 8825-7)">OER</abbr>-encoding of the following <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure:</p>
+<p>MessageActivationCodeStructure ::= SEQUENCE {</p>
+<p>essNtcipCategory.0 OPTIONAL, -- \@NTCIP1204-v03</p>
+<p>essTypeOfStation.0 OPTIONAL, -- \@NTCIP1204-v03</p>
+<p>essLatitude.0 OPTIONAL, -- \@NTCIP1204-v03</p>
+<p>essLongitude.0 OPTIONAL, -- \@NTCIP1204-v03</p>
+<p>tempMetaData SEQUENCE OF TemperatureMetaData OPTIONAL</p>
+<p>}</p>
+<p>TemperatureMetaData ::= SEQUENCE {</p>
+<p>essTemperatureSensorIndex.x OPTIONAL, -- \@NTCIP1204-v03</p>
+<p>essTemperatureSensorHeight.x OPTIONAL -- \@NTCIP1204-v03</p>
+<p>}</p>
+<p>where,</p>
+<p>x = the essTemperatureSensorIndex for the value being reported</p>
+<p>For example, the following left-hand hexadecimal code would be decoded
+as follows:</p>
+<p>17 All optional fields other than essTypeOfStation are present</p>
+<p>02 Category = \'permanent\'</p>
+<p>02 50 AA 26 Latitude = 38.840870 degrees</p>
+<p>F9 BD 2E AD Longitude = -105.042259 degrees</p>
+<p>02 Count for SEQUENCE OF = 2</p>
+<p>03 Both optional fields are present</p>
+<p>01 Index = 1</p>
+<p>01 Height for index 1 = 1 meter</p>
+<p>03 Both optional fields are present</p>
+<p>02 Index = 2</p>
+<p>05 Height for index 2 = 5 meters</p>
+<p>\&lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.5.2.15.4\"</p>
+<p>::= { example 17 }</p>
+<ol>
+<li>Block Object Using Value Dereferencing</li>
+</ol>
+<p>In the following example, the fields within the <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure are not
+known at design time. Since a more meaningful value of DISPLAY-HINT
+cannot be provided, the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> macro references the ITSOerString.</p>
+<p>The reference to \"essNtcipCategory.0\" is an example of a
+valuereference that uses a number as an index.
+essTemperatureSensorHeight.x\" is an example of a valuereference that
+uses a DefinedValue as an index.</p>
+<p>fdObjectGroupCurrentValue <abbr title="X.208 ASN.1 macro used to define the meta-attributes of an object type in an SNMP MIB module.">OBJECT-TYPE</abbr></p>
+<p>SYNTAX ITSOerString</p>
+<p>MAX-ACCESS read-only</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"The <abbr title="Octet Encoding Rules, as defined by ITU-T X.696 (ISO/IEC 8825-7)">OER</abbr> encoded string of the following <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure using the
+refinements defined in Clause 4.5.4.2 of NTCIP 8004:</p>
+<p>SEQUENCE {</p>
+<p>*fdObjectGroupFieldObject.x.y.* -- \@OBJECT-GROUP-MIB</p>
+<p>}</p>
+<p>where x and y represent the fdObjectGroupOwner and fdObjectGroupName of
+the requested fdObjectGroupCurrentValue.</p>
+<p>If an error occurs in retrieving any value, fdObjectGroupLastError shall
+be updated to reflect the reported error and the value of this <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>
+(fdObjectGroupCurrentValue) shall be a zero-length string. \"</p>
+<p>REFERENCE \"NTCIP 1103 watchBlockValue\"</p>
+<p>::= {example 18}</p>
+<ol>
+<li>Notification Type Macro</li>
+</ol>
+<p>sampleNotification NOTIFICATION-TYPE</p>
+<p>OBJECTS { sampleObject }</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"A sample <abbr title="unsolicited event message issued by an SNMP agent for a management station">notification</abbr>.\"</p>
+<p>::= { example 19 }</p>
+<ol>
+<li>Object Group Macro</li>
+</ol>
+<p>essCharacteristicsGroup OBJECT-GROUP</p>
+<p>OBJECTS {</p>
+<p>essNtcipCategory,</p>
+<p>essNtcipSiteDescription,</p>
+<p>essTypeOfStation,</p>
+<p>essLatitude,</p>
+<p>essLongitude,</p>
+<p>essReferenceHeight</p>
+<p>}</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"Management information that characterizes the ESS. \"</p>
+<p>::= {example 20}</p>
+<ol>
+<li>Notification Group Macro</li>
+</ol>
+<p>sampleNotificationGroup NOTIFICATION-GROUP</p>
+<p>NOTIFICATIONS {</p>
+<p>sampleNotification</p>
+<p>}</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"Notifications included in this document.\"</p>
+<p>::= {example 21}</p>
+<ol>
+<li>Module Compliance Macro</li>
+</ol>
+<p>sampleCompliance MODULE-COMPLIANCE</p>
+<p>STATUS current</p>
+<p>DESCRIPTION</p>
+<p>\"The conformance statement for this sample\"</p>
+<p>MODULE -- this module</p>
+<p>MANDATORY-GROUPS {</p>
+<p>essCharacteristicsGroup,</p>
+<p>sampleNotificationGroup</p>
+<p>}</p>
+<p>::= {example 22}</p>
+<h1 class="ANNEX-heading1" id="history-of-changes-informative">History of Changes [Informative]<a class="headerlink" href="#history-of-changes-informative" title="Permanent link">¶</a></h1>
+<p>Annex D summarizes the changes made between the prior version of NTCIP
+8004 and NTCIP 8004 v03.</p>
+<p>The migration of NTCIP from SNMPv1 to SNMPv3 required NTCIP 8004 to
+migrate from SMIv1 to SMIv2, which required fundamental changes in the
+way that NTCIP documents its <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types. While the scope of NTCIP 8004
+v03 is consistent with the scope of prior versions of NTCIP 8004, the
+details and references have changed considerably. The magnitude of this
+change resulted in a complete rewrite of the document, including:</p>
+<p>a)  Updating references</p>
+<p>b)  Rewriting Section 2 to be consistent with SNMPv3 message structure
+    and terminology</p>
+<p>c)  Rewriting Section 3 to be consistent with the concepts and
+    terminology contained in ISO/<abbr title="International Electrotechnical Commission">IEC</abbr> 9834-1 and to update the node
+    assignments under NEMA</p>
+<p>d)  Rewriting Section 4 to be a profile of the SMIv2 and related <abbr title="Internet Engineering Task Force">IETF</abbr>
+    RFCs</p>
+<p>e)  Restructuring the document to consolidate all requirements for
+    implementations into Section 5</p>
+<p>f)  Restructuring the document to consolidate guidelines for operating
+    agencies into Section 6</p>
+<p>g)  Revising Annex A to conform with SMIv2 and deprecate items that are
+    no longer recommended</p>
+<p>h)  Adding Annex B to define special rules from converting from SMIv1 to
+    SMIv2</p>
+<p>i)  Updating and consolidating all examples into Annex C</p>
+<p>j)  Updating Annex D.</p>
+<div class="language-text highlight"><pre><span></span><code>1.  
+2.  
+3.  
+4.  
+5.  
+6.
+</code></pre></div>
+<!-- -->
+<p>a)<br/>
+b)<br/>
+c)  1.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.<br/>
+    2.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.  </p>
+<!-- -->
+<p>a)<br/>
+b)<br/>
+c)  1.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.<br/>
+    2.<br/>
+    3.<br/>
+    4.<br/>
+    5.  </p>
+<!-- -->
+<p>a)<br/>
+b)  1.<br/>
+    2.<br/>
+    3.<br/>
+    4.<br/>
+    5.  </p>
+<p>§</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><abbr title="Internet Architecture Board Standard">IAB STD</abbr> 58 is still based on <abbr title="International Telecommunication Union -- Telecommunication Standardization Sector">ITU-T</abbr> X.208, which is now withdrawn,
+but defines the fundamental concept of a macro and <abbr title="sequence of NVT ASCII characters conforming to X.208 Abstract Syntax Notation One (ASN.1) and IAB STD 58. MIB modules are used to define the data objects that are to make up the instantiated objects of the MIB. NOTE---A MIB module can be, and within NTCIP   typically is, presented as both part of a standard and as a stand-alone, computer-readable text file.">MIB module</abbr> as
+used for <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p>See <a href="https://standards.iso.org/iso/20684/-1/ed-1/en/">https://standards.iso.org/iso/20684/-1/ed-1/en/</a> for
+maintained electronic files. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p>ISO 9834-1 uses the term "arc" instead of "node". <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:4">
+<p><abbr title="Simple Network Management Protocol version 3">SNMP</abbr> limits access to the first 2\^32-1 nodes at any one level and
+to 128 levels, but from a practical perspective, this is still
+nearly limitless. <a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:5">
+<p>A <abbr title="instance of a management information base(MIB). NOTE---A single SNMP agent (e.g., a unique UDP/IP address) typically represents a single context, but can support multiple contexts.">context</abbr> represents a coherent "collection of management
+information". Often, a physical controller will have a single
+<abbr title="instance of a management information base(MIB). NOTE---A single SNMP agent (e.g., a unique UDP/IP address) typically represents a single context, but can support multiple contexts.">context</abbr>, but a single physical controller could control multiple
+NTCIP devices (e.g., multiple message signs, multiple traffic
+signals, etc.) and/or serve as a proxy <abbr title="entity that receives requests and transmits responses to the received requests.">agent</abbr> to multiple non-NTCIP
+devices. In this case, each device should be assigned a separate
+<abbr title="instance of a management information base(MIB). NOTE---A single SNMP agent (e.g., a unique UDP/IP address) typically represents a single context, but can support multiple contexts.">context</abbr> within the controller so that the management information for
+each device is kept as distinctly separate instances. <a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:6">
+<p>The same <abbr title="a condition or capability to which a system shall conform">requirement</abbr> sometimes appears multiple times within and
+across RFCs. This document eliminates this redundancy and only
+provides a single sample reference to each <abbr title="a condition or capability to which a system shall conform">requirement</abbr>. <a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:7">
+<p>Within this <abbr title="instance of a management information base(MIB). NOTE---A single SNMP agent (e.g., a unique UDP/IP address) typically represents a single context, but can support multiple contexts.">context</abbr>, a module using the same MODULE-IDENTITY
+represents a new revision of the module. A module that uses a
+different MODULE-IDENTITY is considered as different module. If a
+module is intended to be a replacement of all objects of an existing
+module, it should use a new MODULE-IDENTITY. <a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:8">
+<p>Required sections for NTCIP data dictionary standards are defined
+in NTCIP 8002. <a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:9">
+<p>Within NTCIP, waivers shall require approval of the Joint
+Committee on the NTCIP <a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:10">
+<p><abbr title="Request for Comments">RFC</abbr> 2580 requires standardized modules to either include a
+MODULE-COMPLIANCE macro or to be paired with a companion module that
+provides this definition <a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:11">
+<p>NTCIP standards are allowed to document module compliance with a
+MODULE-COMPLIANCE macro (either in the same MIB or a different MIB)
+or through the use of module compliance and supported range tables
+as defined in X.X.X <a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:12">
+<p>Moving an invocation can cause problems in other modules using
+the IMPORT statement; however, this <abbr title="a condition or capability to which a system shall conform">requirement</abbr> does not apply to
+upgrading modules from SMIv1 to SMIv2 because the module names
+change. <a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:13">
+<p><abbr title="Request for Comments">RFC</abbr> 2578 recommends against exceeding 32 characters, but <abbr title="Request for Comments">RFC</abbr> 4181
+explicitly revises the statement to allow longer names when
+necessary to support unique, mnemonic names. <a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+<li id="fn:14">
+<p>Private MIBs are encouraged to prefix descriptors with the
+appropriate enterprise name <a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">↩</a></p>
+</li>
+<li id="fn:15">
+<p>The <abbr title="a condition or capability to which a system shall conform">requirement</abbr> is intended to only apply to <abbr title="Request for Comments">RFC</abbr> documents, this
+profile expands its application to NTCIP documents <a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">↩</a></p>
+</li>
+<li id="fn:16">
+<p>This suffix is optional for Version 1 descriptors <a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">↩</a></p>
+</li>
+<li id="fn:17">
+<p>For NTCIP, the contact details shall reflect where <abbr title="person using the system that is developed.">user</abbr> comments
+are to be sent, as defined in foreword of the document. <a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">↩</a></p>
+</li>
+<li id="fn:18">
+<p>Alternatively, the information can be provided in another
+normative section of the <abbr title="sequence of NVT ASCII characters conforming to X.208 Abstract Syntax Notation One (ASN.1) and IAB STD 58. MIB modules are used to define the data objects that are to make up the instantiated objects of the MIB. NOTE---A MIB module can be, and within NTCIP   typically is, presented as both part of a standard and as a stand-alone, computer-readable text file.">MIB module</abbr>, such as the DESCRIPTION clause
+of a table or of the MODULE-IDENTITY macro. <a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">↩</a></p>
+</li>
+<li id="fn:19">
+<p><abbr title="Request for Comments">RFC</abbr> 2578 indicates that the DEFVAL "may be used" and that it is a
+"hint" to implementors. As such, it is informative and can be
+changed without deprecating an <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>. Within NTCIP, the DEFVAL
+clause is recommended within NTCIP and changes to its value should
+be avoided. <a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">↩</a></p>
+</li>
+<li id="fn:20">
+<p>Other formats should only be used for backwards <abbr title="ability of two or more systems or components to exchange information \[ISO/IEC/IEEE 24765\]">compatibility</abbr> <a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">↩</a></p>
+</li>
+<li id="fn:21">
+<p>Or use the ITSRelativeOid textual convention <a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text">↩</a></p>
+</li>
+<li id="fn:22">
+<p>Use a pair of objects based on either 1) InetAddressType and
+InetAddress or 2) a) either TranspotDomain or TransportAddressType
+and b) TransportAddress <a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">↩</a></p>
+</li>
+<li id="fn:23">
+<p>Except when converting from SMIv1 <a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">↩</a></p>
+</li>
+<li id="fn:24">
+<p>"\&lt;EntryType&gt;" represents an <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> SEQUENCE without the DEFAULT,
+OPTIONAL, or COMPONENTS OF keywords <a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">↩</a></p>
+</li>
+<li id="fn:25">
+<p>As such, if an implementation does not support any rows, it would
+not support the <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> that indicates the number of rows <a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text">↩</a></p>
+</li>
+<li id="fn:26">
+<p>Unless explicitly prohibited within the \&lt;Definition&gt; of the
+conceptual row <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> <a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text">↩</a></p>
+</li>
+<li id="fn:27">
+<p>It is preferred to revise the definition of the existing table if
+it is managed by the same authority <a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 27 in the text">↩</a></p>
+</li>
+<li id="fn:28">
+<p>Example 1: Table B only has rows for some of the rows in Table A.
+Example 2: Table B has multiple rows for each row in Table A <a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 28 in the text">↩</a></p>
+</li>
+<li id="fn:29">
+<p>Except when importing from SMIv1 <a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 29 in the text">↩</a></p>
+</li>
+<li id="fn:30">
+<p>Use "read-create" instead <a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 30 in the text">↩</a></p>
+</li>
+<li id="fn:31">
+<p>See Clause 5.3 for an example. <a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 31 in the text">↩</a></p>
+</li>
+<li id="fn:32">
+<p>Within <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>, an \"INTEGER\" is identical to an \"Integer32\";
+omitting the \"32\" has caused confusion in the past. <a class="footnote-backref" href="#fnref:32" title="Jump back to footnote 32 in the text">↩</a></p>
+</li>
+<li id="fn:33">
+<p>The CounterBasedGauge64 breaks some defined semantics of the base
+type, but is the best current solution for a 64-bit gauge and is
+generally accepted by the <abbr title="Simple Network Management Protocol version 3">SNMP</abbr> community <a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 33 in the text">↩</a></p>
+</li>
+<li id="fn:34">
+<p>May use Integer32 to support backward <abbr title="ability of two or more systems or components to exchange information \[ISO/IEC/IEEE 24765\]">compatibility</abbr> <a class="footnote-backref" href="#fnref:34" title="Jump back to footnote 34 in the text">↩</a></p>
+</li>
+<li id="fn:35">
+<p>\"Based on\" allows for the use of textual conventions that use
+the OBJECT IDENTiFIER type as its base. <a class="footnote-backref" href="#fnref:35" title="Jump back to footnote 35 in the text">↩</a></p>
+</li>
+<li id="fn:36">
+<p>Integer and the various NTCIP \"bitmap\" types shall only be used
+for backwards <abbr title="ability of two or more systems or components to exchange information \[ISO/IEC/IEEE 24765\]">compatibility</abbr> <a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 36 in the text">↩</a></p>
+</li>
+<li id="fn:37">
+<p>Within <abbr title="Simple Network Management Protocol version 3">SNMP</abbr>, an OCTET STRING is not allowed to exceed 65535
+octets; this constraint should be added to any OCTET STRING that is
+currently unconstrained <a class="footnote-backref" href="#fnref:37" title="Jump back to footnote 37 in the text">↩</a></p>
+</li>
+<li id="fn:38">
+<p>For example, the range of counters and gauges cannot be changed
+as doing so would change the meaning of the maximum and minimum
+values; however, an <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> can be <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr> and replaced <a class="footnote-backref" href="#fnref:38" title="Jump back to footnote 38 in the text">↩</a></p>
+</li>
+<li id="fn:39">
+<p>Implementations are not allowed to extend meaning. For example,
+if an implementation wishes to logically create new enumerated
+values, it cannot add enumerations to the standard <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> as
+doing so might conflict with future versions of the standard.
+Instead, it could create a manufacturer-specific <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> and
+transition the standard <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> to a neutral value (e.g.,
+"other") <a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 39 in the text">↩</a></p>
+</li>
+<li id="fn:40">
+<p>Values not listed are reserved for future standardization and
+constitute a <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr> error if used <a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 40 in the text">↩</a></p>
+</li>
+<li id="fn:41">
+<p><abbr title="Request for Comments">RFC</abbr> 2578 recommends against exceeding 32 characters, but <abbr title="Request for Comments">RFC</abbr> 4181
+explicitly revises the statement to allow longer names when
+necessary to support unique, mnemonic names. <a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 41 in the text">↩</a></p>
+</li>
+<li id="fn:42">
+<p>Changes should only be made when there is significant need as
+these names often are used within code and changes can create
+maintenance headaches <a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 42 in the text">↩</a></p>
+</li>
+<li id="fn:43">
+<p>This might require defining a local textual convention <a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 43 in the text">↩</a></p>
+</li>
+<li id="fn:44">
+<p>Values not listed are reserved for future standardization and
+constitute a <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr> error if used <a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 44 in the text">↩</a></p>
+</li>
+<li id="fn:45">
+<p>When adding named bits to an existing BITS construct, bit
+positions can be skipped to facilitate identification of different
+versions of the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> by forcing new bits into a new octet. <a class="footnote-backref" href="#fnref:45" title="Jump back to footnote 45 in the text">↩</a></p>
+</li>
+<li id="fn:46">
+<p><abbr title="Request for Comments">RFC</abbr> 2578 recommends against exceeding 32 characters, but <abbr title="Request for Comments">RFC</abbr> 4181
+explicitly revises the statement to allow longer names when
+necessary to support unique, mnemonic names. <a class="footnote-backref" href="#fnref:46" title="Jump back to footnote 46 in the text">↩</a></p>
+</li>
+<li id="fn:47">
+<p>Except for existing block objects that cannot be converted into a
+structure that uses <abbr title="Octet Encoding Rules, as defined by ITU-T X.696 (ISO/IEC 8825-7)">OER</abbr> <a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 47 in the text">↩</a></p>
+</li>
+<li id="fn:48">
+<p>It is the responsibility of the agency deploying an <abbr title="Simple Network Management Protocol version 3">SNMP</abbr> <abbr title="entity that receives requests and transmits responses to the received requests.">agent</abbr>
+that users are not granted greater access for block objects than
+they are for the objects contained within the block <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>. <a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 48 in the text">↩</a></p>
+</li>
+<li id="fn:49">
+<p>For example, a ranged integer might indicate that the maximum
+value has a special meaning. <a class="footnote-backref" href="#fnref:49" title="Jump back to footnote 49 in the text">↩</a></p>
+</li>
+<li id="fn:50">
+<p>The clause should always point to the next sequential
+replacement; if that <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> has been <abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr>, it will reference
+its replacement. <a class="footnote-backref" href="#fnref:50" title="Jump back to footnote 50 in the text">↩</a></p>
+</li>
+<li id="fn:51">
+<p>For example, the functionality is no longer relevant or the
+design was flawed/ambiguous and has been replaced with a new <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>
+type <a class="footnote-backref" href="#fnref:51" title="Jump back to footnote 51 in the text">↩</a></p>
+</li>
+<li id="fn:52">
+<p>NTCIP defines additional rules for the use of notifications as
+defined in NTCIP 2301. <a class="footnote-backref" href="#fnref:52" title="Jump back to footnote 52 in the text">↩</a></p>
+</li>
+<li id="fn:53">
+<p>Throttling is important in a number of scenarios, including: the
+same <abbr title="unsolicited event message issued by an SNMP agent for a management station">notification</abbr> occurring in rapid succession, different
+notifications occurring in rapid succession, notifications buffering
+when the device is offline and flooding the network when connected,
+and limited buffering when offline and having a large number of
+devices flood the network when connectivity is restored (e.g., after
+a power outage). The throttling design should protect against all of
+these. ISO 20684-4 proposes a solution for this that should be
+considered. <a class="footnote-backref" href="#fnref:53" title="Jump back to footnote 53 in the text">↩</a></p>
+</li>
+<li id="fn:54">
+<p>They should be replaced with textual conventions <a class="footnote-backref" href="#fnref:54" title="Jump back to footnote 54 in the text">↩</a></p>
+</li>
+<li id="fn:55">
+<p>Because this is optional, an <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> group can remain \"current\",
+even if one of the contained <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types are \"<abbr title="indicates the user need, requirement, dialog, or object is valid in limited circumstances, but has been replaced by another.">deprecated</abbr>\". See
+<abbr title="Request for Comments">RFC</abbr> 4181 Clause 4.9 for more details. <a class="footnote-backref" href="#fnref:55" title="Jump back to footnote 55 in the text">↩</a></p>
+</li>
+<li id="fn:56">
+<p>This allows a reader to quickly identify when features were added <a class="footnote-backref" href="#fnref:56" title="Jump back to footnote 56 in the text">↩</a></p>
+</li>
+<li id="fn:57">
+<p>It is expected that the version <a class="footnote-backref" href="#fnref:57" title="Jump back to footnote 57 in the text">↩</a></p>
+</li>
+<li id="fn:58">
+<p>Implemented as a MODULE-COMPLIANCE macro. <a class="footnote-backref" href="#fnref:58" title="Jump back to footnote 58 in the text">↩</a></p>
+</li>
+<li id="fn:59">
+<p>Implemented as a module compliance table and <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> refinement
+table <a class="footnote-backref" href="#fnref:59" title="Jump back to footnote 59 in the text">↩</a></p>
+</li>
+<li id="fn:60">
+<p>Encodings that resolve to an OCTET STRING identify a leading and
+trailing octet, which are then sent to lower layers one octet at a
+time; integers are encoded as a single unit and lower <abbr title="specific set of rules, procedures, and conventions defining the format and timing of  data transmissions between devices that are accepted and used to understand each other.">protocol</abbr>
+layers define the ordering of octets <a class="footnote-backref" href="#fnref:60" title="Jump back to footnote 60 in the text">↩</a></p>
+</li>
+<li id="fn:61">
+<p>NTCIP 8004 currently does not define any notifications and
+therefore currently does not define a notifications node; however,
+node zero is reserved for this purpose. <a class="footnote-backref" href="#fnref:61" title="Jump back to footnote 61 in the text">↩</a></p>
+</li>
+<li id="fn:62">
+<p>NTCIP 8004 currently does not have a conformance statement
+because currently it only defines textual conventions and <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr>
+identities; however, node 127 is reserved for this purpose. <a class="footnote-backref" href="#fnref:62" title="Jump back to footnote 62 in the text">↩</a></p>
+</li>
+<li id="fn:63">
+<p>Clause 7.9 of <abbr title="Request for Comments">RFC</abbr> 2578 indicates that implementing the default
+value is optional. This clause makes it recommended. <a class="footnote-backref" href="#fnref:63" title="Jump back to footnote 63 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2025 22:10:15 UTC">June 13, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://github.com/ite-org/NTCIP-8004" property="dct:title" rel="cc:attributionURL">NTCIP SMI</a> by <span property="cc:attributionName">NTCIP</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img alt="" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img alt="" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a></p>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.status", "content.tooltips", "icons", "navigation.path", "navigation.top"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+</body>
+</html>

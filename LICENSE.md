@@ -1,60 +1,28 @@
 # License
 
-(c) Copyright 1998 by the American Association of State Highway
-and Transportation Officials (AASHTO), the Institute of
-Transportation Engineers (ITE), and the National Electrical
-Manufacturers Association (NEMA).  All intellectual property rights,
-including, but not limited to, the rights of reproduction, translation
-and display are reserved under the laws of the United States of
-America, the Universal Copyright Convention, the Berne Convention,
-and the International and Pan American Copyright Conventions.  Except
-as provided, you may not copy these materials without written
-permission from either AASHTO, ITE, or NEMA.  Use of these materials
-does not give you any rights of ownership or claim of copyright in
-or to these materials.
+This document, including the management information base (MIB) defined herein, is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC-BY 4.0) with additional terms and conditions MIB. By accessing, using, or contributing to the document, you agree to be bound by the terms of this Agreement, which includes the CC-BY 4.0 License and the additional provisions herein. By contributing to the document, you grant the NTCIP a perpetual, worldwide, non-exclusive, royalty-free license to use, modify, and incorporate your contributions into the document.
 
-To the extent and in the limited event these materials are
-distributed by AASHTO/ITE/NEMA in the form of a Management
-Information Base ("MIB"), AASHTO/ITE/NEMA extends the following
-permissions:
+Except for the MIB, you are free to share (copy and redistribute the material in any medium or format) and adapt (remix, transform, and build upon the material) for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
-(i)  you may make and/or distribute unlimited copies (including
-derivative works) of the MIB, including copies for commercial
-distribution, provided that (a) each copy you make and/or distribute
-contains this Notice and (b) each derivative work of the MIB uses
-the same module name followed by "-", followed by your Internet
-Assigned Number Authority (IANA)-assigned enterprise number;
-(ii)  use of the MIB is restricted in that the syntax field may be
-modified only to reflect a more restrictive subrange or enumerated
-values;
-(iii)  the description field may be modified but only to the extent
-that:  (a) only those bit values or enumerated values that are
-supported are listed; and (b) the more restrictive subrange is
-expressed.
+## Additional Terms and Conditions
 
-These materials are delivered "AS IS" without any warranties as to
-their use or performance.
+In addition to the terms of CC-BY 4.0, the following provisions apply to the use, distribution, and adaptation of the MIB:
 
-AASHTO/ITE/NEMA AND THEIR SUPPLIERS DO NOT WARRANT THE PERFORMANCE
-OR RESULTS YOU MAY OBTAIN BY USING THESE MATERIALS.  AASHTO/ITE/NEMA
-AND THEIR SUPPLIERS MAKE NO WARRANTIES, EXPRESS OR IMPLIED, AS TO
-NONINFRINGEMENT OF THIRD PARTY RIGHTS, MERCHANTABILITY, OR FITNESS
-FOR ANY PARTICULAR PURPOSE.  IN NO EVENT WILL AASHTO, ITE OR NEMA
-OR THEIR SUPPLIERS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY CLAIM
-OR FOR ANY CONSEQUENTIAL, INCIDENTAL OR SPECIAL DAMAGES, INCLUDING
-ANY LOST PROFITS OR LOST SAVINGS, ARISING FROM YOUR REPRODUCTION OR
-USE OF THESE MATERIALS, EVEN IF AN AASHTO, ITE, OR NEMA
-REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  
-Some states or jurisdictions do not allow the exclusion or
-limitation of incidental, consequential or special damages, or the
-exclusion of implied warranties, so the above limitations may not
-apply to you.
+### 1. Additional Definitions
 
-Use of these materials does not constitute an endorsement or
-affiliation by or between AASHTO, ITE, or NEMA and you, your company,
-or your products and services.
+a. "MIB" refers to the Management Information Base specification, including its textual content and structure, developed as part of the standards effort.
+b. "NTCIP" refers to AASHTO / ITE / NEMA, who maintain and govern the MIB and its associated Object Identifiers (OIDs).
 
-If you are unwilling to accept the foregoing restrictions, you
-should immediately return these materials.
+### 2. Restrictions on OID Modifications
 
-NTCIP is a trademark of AASHTO/ITE/NEMA.
+a. Adapted Material may not redefine existing OIDs or define new OIDs under the "nema" node (1.3.6.1.4.1.1206).
+b. Any proposed modifications or extensions to the MIB that involve OIDs under the "nema" node must be submitted to the NTCIP for review and approval.
+c. Adapted Material must clearly indicate that it is not part of the official MIB and must not claim to represent an NTCIP MIB.
+
+### 3. No Warranty
+
+The MIB is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. The NTCIP does not warrant that the MIB will meet your requirements or be error-free.
+
+### 4. Limitation of Liability
+
+In no event shall the NTCIP or its contributors be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use the MIB, even if advised of the possibility of such damages.

@@ -1,4 +1,5 @@
 # NTCIP-8004
+
 Structure and Identification of Management Information (SMI)
 
 ## Important Links
@@ -17,5 +18,4 @@ This represents the approved MIB for NEMA TS 3.2 as published in 1998.
 
 ### Overview
 
-The files contained in this directory provide the foundational nodes and 
-textual conventions used by NTCIP standards.
+The files contained in this directory provide the foundational nodes and textual conventions used by NTCIP standards.
