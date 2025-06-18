@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ config.site_name }}</title>
+    <style>
+        {
+                {
+                include('pdf-styles.scss') | default('')
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% for doc in documents %}
+    {% if doc.url == 'toc.md' %}
+    <!-- Render TOC for toc.md -->
+    <div class="toc">
+        <h1>Table of Contents</h1>
+        {{ toc | safe }}
+    </div>
+    {% else %}
+    <!-- Render regular document content -->
+    {{ doc.content | safe }}
+    {% endif %}
+    {% endfor %}
+</body>
+
+</html>
