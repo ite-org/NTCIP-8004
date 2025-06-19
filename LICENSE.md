@@ -1,12 +1,16 @@
 # License
 
-This document, including the management information base (MIB) defined herein, is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC-BY 4.0) with additional terms and conditions MIB. By accessing, using, or contributing to the document, you agree to be bound by the terms of this Agreement, which includes the CC-BY 4.0 License and the additional provisions herein. By contributing to the document, you grant the NTCIP a perpetual, worldwide, non-exclusive, royalty-free license to use, modify, and incorporate your contributions into the document.
+[NTCIP 8004](https://github.com/ite-org/NTCIP-8004) by the American Association of State Highway and Transportation Officials (AASHTO), Institute of Transportation Engineers (ITE), and National Electrical Manufacturers Association (NEMA) is licensed under [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1) with additional terms and conditions for the included Management Information Bases (MIBs).
+
+![CC BY 4.0](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png)
+
+By accessing, using, or contributing to the document, you agree to be bound by the terms of this Agreement, which includes the CC-BY 4.0 License and the additional provisions herein. By contributing to the document, you grant the NTCIP a perpetual, worldwide, non-exclusive, royalty-free license to use, modify, and incorporate your contributions into the document.
 
 Except for the MIB, you are free to share (copy and redistribute the material in any medium or format) and adapt (remix, transform, and build upon the material) for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
 
 ## Additional Terms and Conditions
 
-In addition to the terms of CC-BY 4.0, the following provisions apply to the use, distribution, and adaptation of the MIB:
+In addition to the terms of CC-BY 4.0, the following provisions apply to the use, distribution, and adaptation of the MIBs:
 
 ### 1. Additional Definitions
 
@@ -26,3 +30,5 @@ The MIB is provided "as is" without warranty of any kind, express or implied, in
 ### 4. Limitation of Liability
 
 In no event shall the NTCIP or its contributors be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use the MIB, even if advised of the possibility of such damages.
+
+If the user is unwilling to accept the foregoing restrictions, he or she should immediately return these materials.

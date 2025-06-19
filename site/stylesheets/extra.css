@@ -143,3 +143,17 @@ p.opt::before {
     /* Green */
     color: white;
 }
+
+/* Only apply letter and roman styling to top-level lists inside content */
+.md-typeset > ol:not(.footnote-list) {
+  list-style-type: lower-alpha;
+}
+
+.md-typeset > ol:not(.footnote-list) > li > ol {
+  list-style-type: lower-roman;
+}
+
+/* Explicitly reset footnotes to decimal numbers */
+.md-typeset .footnote-list {
+  list-style-type: decimal !important;
+}
