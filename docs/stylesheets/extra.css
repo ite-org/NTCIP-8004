@@ -157,3 +157,7 @@ p.opt::before {
 .md-typeset .footnote-list {
   list-style-type: decimal !important;
 }
+
+.center {
+    text-align: center;
+}
