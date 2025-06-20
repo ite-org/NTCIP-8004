@@ -1,0 +1,1234 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="NTCIP Structure of Management Information" name="description"/>
+<link href="https://ite-org.github.io/NTCIP-8004/v3.0.0-a.19/macro-examples/" rel="canonical"/>
+<link href="../conversion/" rel="prev"/>
+<link href="../history-of-changes/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.14" name="generator"/>
+<title>C Macro Examples - NTCIP SMI</title>
+<link href="../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M208%20352c114.9%200%20208-78.8%20208-176S322.9%200%20208%200%200%2078.8%200%20176c0%2038.6%2014.7%2074.3%2039.6%20103.4-3.5%209.4-8.7%2017.7-14.2%2024.7-4.8%206.2-9.7%2011-13.3%2014.3-1.8%201.6-3.3%202.9-4.3%203.7-.5.4-.9.7-1.1.8l-.2.2C1%20327.2-1.4%20334.4.8%20340.9S9.1%20352%2016%20352c21.8%200%2043.8-5.6%2062.1-12.5%209.2-3.5%2017.8-7.4%2025.2-11.4C134.1%20343.3%20169.8%20352%20208%20352m240-176c0%20112.3-99.1%20196.9-216.5%20207%2024.3%2074.4%20104.9%20129%20200.5%20129%2038.2%200%2073.9-8.7%20104.7-23.9%207.5%204%2016%207.9%2025.2%2011.4%2018.3%206.9%2040.3%2012.5%2062.1%2012.5%206.9%200%2013.1-4.5%2015.2-11.1s-.2-13.8-5.8-17.9l-.2-.2c-.2-.2-.6-.4-1.1-.8-1-.8-2.5-2-4.3-3.7-3.6-3.3-8.5-8.1-13.3-14.3-5.5-7-10.7-15.4-14.2-24.7%2024.9-29%2039.6-64.7%2039.6-103.4%200-92.8-84.9-168.9-192.6-175.5.4%205.1.6%2010.3.6%2015.5z%22/%3E%3C/svg%3E');}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../stylesheets/pdf.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#macro-examples-informative">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+<aside class="md-banner">
+<div class="md-banner__inner md-grid md-typeset">
+<!--  <p class="status-badge proposal">Proposal: This is a newly proposed project that does not yet reflect broad community input</p>
+-->
+<p class="status-badge draft">Draft: This is a draft document that is subject to significant changes at any time</p>
+<!--  <p class="status-badge preliminary">Preliminary: This is a preliminary document and may experience changes prior to finalization</p>
+  <p class="status-badge recommended">Recommended: This document has been recommended for balloting but is not yet approved</p>
+  <p class="status-badge approved">Recommended: This is an approved document</p>
+-->
+</div>
+</aside>
+</div>
+<div data-md-color-scheme="default" data-md-component="outdated" hidden="">
+<aside class="md-banner md-banner--warning">
+<div class="md-banner__inner md-grid md-typeset">
+              
+You're not viewing the latest version.
+<a href="../..">
+<strong>Click here to go to latest.</strong>
+</a>
+</div>
+<script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+</aside>
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="NTCIP SMI" class="md-header__button md-logo" data-md-component="logo" href=".." title="NTCIP SMI">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            NTCIP SMI
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              C Macro Examples
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/ite-org/NTCIP-8004" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<a class="md-header-nav__button md-icon" href="../pdf/NTCIP-8004.pdf" title="PDF">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,0c-17.6,0-32,14.4-32,32v448c0,17.6,14.4,32,32,32h320c17.6,0,32-14.4,32-32V128L352,0H128z" fill="#E2E5E7"></path>
+<path d="m384 128h96l-128-128v96c0 17.6 14.4 32 32 32z" fill="#B0B7BD"></path>
+<polygon fill="#CAD1D8" points="480 224 384 128 480 128"></polygon>
+<path d="M416,416c0,8.8-7.2,16-16,16H48c-8.8,0-16-7.2-16-16V256c0-8.8,7.2-16,16-16h352c8.8,0,16,7.2,16,16  V416z" fill="#F15642"></path>
+<g fill="#fff">
+<path d="m101.74 303.15c0-4.224 3.328-8.832 8.688-8.832h29.552c16.64 0 31.616 11.136 31.616 32.48 0 20.224-14.976 31.488-31.616 31.488h-21.36v16.896c0 5.632-3.584 8.816-8.192 8.816-4.224 0-8.688-3.184-8.688-8.816v-72.032zm16.88 7.28v31.872h21.36c8.576 0 15.36-7.568 15.36-15.504 0-8.944-6.784-16.368-15.36-16.368h-21.36z"></path>
+<path d="m196.66 384c-4.224 0-8.832-2.304-8.832-7.92v-72.672c0-4.592 4.608-7.936 8.832-7.936h29.296c58.464 0 57.184 88.528 1.152 88.528h-30.448zm8.064-72.912v57.312h21.232c34.544 0 36.08-57.312 0-57.312h-21.232z"></path>
+<path d="m303.87 312.11v20.336h32.624c4.608 0 9.216 4.608 9.216 9.072 0 4.224-4.608 7.68-9.216 7.68h-32.624v26.864c0 4.48-3.184 7.92-7.664 7.92-5.632 0-9.072-3.44-9.072-7.92v-72.672c0-4.592 3.456-7.936 9.072-7.936h44.912c5.632 0 8.96 3.344 8.96 7.936 0 4.096-3.328 8.704-8.96 8.704h-37.248v0.016z"></path>
+</g>
+<path d="m400 432h-304v16h304c8.8 0 16-7.2 16-16v-16c0 8.8-7.2 16-16 16z" fill="#CAD1D8"></path>
+</svg>
+</a></nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Determine classes -->
+<!-- Navigation -->
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<!-- Site title -->
+<label class="md-nav__title" for="__drawer">
+<a aria-label="NTCIP SMI" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Contents">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Contents
+  </label>
+<!-- Repository information -->
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/ite-org/NTCIP-8004" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<!-- Navigation list -->
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Front Matter
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Front Matter
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Title Page
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../notices/">
+<span class="md-ellipsis">
+    Notices
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../acknowledgements/">
+<span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../foreword/">
+<span class="md-ellipsis">
+    Foreword
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Introduction
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../general/">
+<span class="md-ellipsis">
+    1 General
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../background/">
+<span class="md-ellipsis">
+    2 Background
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../object-identification/">
+<span class="md-ellipsis">
+    3 Object Identification
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../rules-for-module-development/">
+<span class="md-ellipsis">
+    4 Rules for Module Development
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../requirements-for-agent-implementations/">
+<span class="md-ellipsis">
+    5 Requirements for Implementations
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../guidelines-for-operating-agencies/">
+<span class="md-ellipsis">
+    6 Guidelines for Agencies
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../smi/">
+<span class="md-ellipsis">
+    A NTCIP SMI
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../conversion/">
+<span class="md-ellipsis">
+    B Conversion to SMIv2
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    C Macro Examples
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    C Macro Examples
+    
+  </span>
+</a>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Determine title -->
+<!-- Table of contents -->
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+<!-- Table of contents title and list -->
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      C Macro Examples
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-identity-macro">
+<span class="md-ellipsis">
+      Module Identity Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-identity-macro">
+<span class="md-ellipsis">
+      Object Identity Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptual-table-object-type">
+<span class="md-ellipsis">
+      Conceptual Table Object Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptual-row-object-type">
+<span class="md-ellipsis">
+      Conceptual Row Object Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#row-status-object-type">
+<span class="md-ellipsis">
+      Row Status Object Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enumeration">
+<span class="md-ellipsis">
+      Enumeration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integer32">
+<span class="md-ellipsis">
+      Integer32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauge32">
+<span class="md-ellipsis">
+      Gauge32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#counter32">
+<span class="md-ellipsis">
+      Counter32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsigned32">
+<span class="md-ellipsis">
+      Unsigned32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-identifier">
+<span class="md-ellipsis">
+      Object Identifier
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bits">
+<span class="md-ellipsis">
+      BITS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#internet-address">
+<span class="md-ellipsis">
+      Internet Address
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text">
+<span class="md-ellipsis">
+      Text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#textual-convention-macro">
+<span class="md-ellipsis">
+      Textual Convention Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#block-object-using-identifier-and-type">
+<span class="md-ellipsis">
+      Block Object Using Identifier and Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#block-object-using-value-reference-and-a-defined-value">
+<span class="md-ellipsis">
+      Block Object Using Value Reference and a Defined Value
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#block-object-using-value-dereferencing">
+<span class="md-ellipsis">
+      Block Object Using Value Dereferencing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notification-type-macro">
+<span class="md-ellipsis">
+      Notification Type Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-group-macro">
+<span class="md-ellipsis">
+      Object Group Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notification-group-macro">
+<span class="md-ellipsis">
+      Notification Group Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-compliance-macro">
+<span class="md-ellipsis">
+      Module Compliance Macro
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../history-of-changes/">
+<span class="md-ellipsis">
+    D History of Changes
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Determine title -->
+<!-- Table of contents -->
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!--
+    Check whether the content starts with a level 1 headline. If it does, the
+    top-level anchor must be skipped, since it would be redundant to the link
+    to the current page that is located just above the anchor. Therefore we
+    directly continue with the children of the anchor.
+  -->
+<!-- Table of contents title and list -->
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      C Macro Examples
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-identity-macro">
+<span class="md-ellipsis">
+      Module Identity Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-identity-macro">
+<span class="md-ellipsis">
+      Object Identity Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptual-table-object-type">
+<span class="md-ellipsis">
+      Conceptual Table Object Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conceptual-row-object-type">
+<span class="md-ellipsis">
+      Conceptual Row Object Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#row-status-object-type">
+<span class="md-ellipsis">
+      Row Status Object Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enumeration">
+<span class="md-ellipsis">
+      Enumeration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integer32">
+<span class="md-ellipsis">
+      Integer32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gauge32">
+<span class="md-ellipsis">
+      Gauge32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#counter32">
+<span class="md-ellipsis">
+      Counter32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsigned32">
+<span class="md-ellipsis">
+      Unsigned32
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-identifier">
+<span class="md-ellipsis">
+      Object Identifier
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bits">
+<span class="md-ellipsis">
+      BITS
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#internet-address">
+<span class="md-ellipsis">
+      Internet Address
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text">
+<span class="md-ellipsis">
+      Text
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#textual-convention-macro">
+<span class="md-ellipsis">
+      Textual Convention Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#block-object-using-identifier-and-type">
+<span class="md-ellipsis">
+      Block Object Using Identifier and Type
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#block-object-using-value-reference-and-a-defined-value">
+<span class="md-ellipsis">
+      Block Object Using Value Reference and a Defined Value
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#block-object-using-value-dereferencing">
+<span class="md-ellipsis">
+      Block Object Using Value Dereferencing
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notification-type-macro">
+<span class="md-ellipsis">
+      Notification Type Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-group-macro">
+<span class="md-ellipsis">
+      Object Group Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notification-group-macro">
+<span class="md-ellipsis">
+      Notification Group Macro
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#module-compliance-macro">
+<span class="md-ellipsis">
+      Module Compliance Macro
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<!-- markdownlint-enable require-heading-annex -->
+<div class="section-3">
+<style>
+  .section-3 { counter-set: section 3; }
+</style>
+<h1 class="annex" id="macro-examples-informative">Macro Examples [Informative]<a class="headerlink" href="#macro-examples-informative" title="Permanent link">¶</a></h1>
+<p>The following examples provide various examples of properly formatted
+invocations of the macros discussed by this document.</p>
+<p>NOTE---While the macros shown are similar to real invocations, the
+details are frequently shortened to save space and the macros often
+represent translations of SMIv1 entities for which the indicated SMIv2
+translations have not yet been approved. The examples within this annex
+are strictly informative and provided as examples, they should not be
+interpreted as standardized information. To prevent any confusion, the
+formal OIDs in this section are shown with a parent node of \"example\".</p>
+<h2 class="annex" id="module-identity-macro">Module Identity Macro<a class="headerlink" href="#module-identity-macro" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">transportation</span><span class="w"> </span><span class="n n-Type">MODULE-IDENTITY</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="n n-Type">LAST-UPDATED</span><span class="w"> </span><span class="err">\</span><span class="s">"202212120500Z\"</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="n n-Type">ORGANIZATION</span><span class="w"> </span><span class="err">\</span><span class="s">"NTCIP BSP2 WG\"</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="n n-Type">CONTACT-INFO</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="s">"name: NTCIP Coordinator</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="s">     email: ntcip@nema.org</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="s">     postal: National Electrical Manufacturers Association</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s">             1300 North 17th Street, Suite 1752</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="s">             Rosslyn, VA 22209-3801</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s">             USA"</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="s">"NEMA delegated its sub-identifier 4 to the Joint Committee on the NTCIP</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="s">     with its previously assigned descriptor of \'transportation\'. This MIB</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="s">     defines the overall structure of NTCIP-defined management information</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="s">     and textual conventions that are believed to be useful for a broad range</span>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="s">     of applications."</span>
+</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n n-Type">REVISION</span><span class="w"> </span><span class="s">"202212120500Z"</span>
+</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="s">"Updated to SMIv2. Divided module into a separate NEMA managed parent</span>
+</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="s">     module and an NTCIP managed module. Commented out most sub-identifiers,</span>
+</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="s">     so that they can be assigned by the MODULE-IDENTITY macro within other</span>
+</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="s">     NTCIP standards. Formalized textual conventions.\"</span>
+</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="n n-Type">REVISION</span><span class="w"> </span><span class="s">"200711290000Z"</span>
+</span><span id="__span-0-24"><a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span><span class="w"> </span><span class="s">"Added tmdd and ntcipTraps nodes."</span>
+</span><span id="__span-0-25"><a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="n n-Type">REVISION</span><span class="w"> </span><span class="s">"200507190500Z"</span>
+</span><span id="__span-0-26"><a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span><span class="w"> </span>
+</span><span id="__span-0-27"><a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="s">"MIB moved into NTCIP 8004 with updated module name and added</span>
+</span><span id="__span-0-28"><a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="s">     nodes for chap, modem, and tmdd."</span>
+</span><span id="__span-0-29"><a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">  </span><span class="n n-Type">REVISION</span><span class="w"> </span><span class="s">"200112010500Z"</span>
+</span><span id="__span-0-30"><a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span><span class="w"> </span><span class="s">"NEMA TS 3.2 republished as NTCIP 1101 v01."</span>
+</span><span id="__span-0-31"><a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">  </span><span class="n n-Type">REVISION</span><span class="w"> </span><span class="s">"199610010500Z"</span>
+</span><span id="__span-0-32"><a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span><span class="w"> </span><span class="s">"NEMA TS 3.2 approved."</span>
+</span><span id="__span-0-33"><a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="object-identity-macro">Object Identity Macro<a class="headerlink" href="#object-identity-macro" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nv">protocols</span><span class="w"> </span><span class="n n-Type">OBJECT-IDENTITY</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span><span class="w"> </span><span class="s">"This node is the root of a subtree for protocol-related</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="s">    management information, such as information related to 1) various layers</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="s">    of the protocol stack, 2) profiles that cover several layers, 3) dynamic</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="s">    object management, and NTCIP traps."</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="conceptual-table-object-type">Conceptual Table Object Type<a class="headerlink" href="#conceptual-table-object-type" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nv">phaseTable</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="kd">SEQUENCE OF</span><span class="w"> </span><span class="n n-Type">PhaseEntry</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">not-accessible</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; A table containing Controller Unit phase parameters.</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="s">     The number of rows in this table is equal to the maxPhases object.</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="s">     &lt;TableType&gt; static</span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.x.1.2"</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="conceptual-row-object-type">Conceptual Row Object Type<a class="headerlink" href="#conceptual-row-object-type" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">phaseEntry</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">PhaseEntry</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">not-accessible</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; Parameters for a specific Controller Unit phase.</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.x.1.2.1"</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="n n-Type">INDEX</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">phaseNumber</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n n-Type">PhaseEntry</span><span class="w"> </span><span class="o">::=</span><span class="w"> </span><span class="kd">SEQUENCE</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="nv">phaseNumber</span><span class="w"> </span><span class="n n-Type">Integer32</span><span class="p">,</span>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="nv">phaseWalk</span><span class="w"> </span><span class="n n-Type">Integer32</span><span class="p">,</span>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="nv">phasePedestrianClear</span><span class="w"> </span><span class="n n-Type">Integer32</span><span class="p">,</span>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="nv">phaseMinimumGreen</span><span class="w"> </span><span class="n n-Type">Integer32</span><span class="p">,</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">  </span><span class="nv">phaseYellowChange</span><span class="w"> </span><span class="n n-Type">Integer32</span><span class="p">,</span>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="nv">phaseRedClear</span><span class="w"> </span><span class="n n-Type">Integer32</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="row-status-object-type">Row Status Object Type<a class="headerlink" href="#row-status-object-type" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nv">vacmAccessStatus</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">RowStatus</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-create</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; The status of this conceptual row.</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="s">       The RowStatus TC [RFC2579] requires that this</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="s">       DESCRIPTION clause states under which circumstances</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="s">       other objects in this row can be modified:</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="s">       The value of this object has no effect on whether</span>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="s">       other objects in this conceptual row can be modified.</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.6.3.16.1.4.1.9"</span>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nv">dmsMemoryMgmt</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w">     </span><span class="kt">INTEGER</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">               </span><span class="nv">other</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="c1">-- deprecated</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">               </span><span class="nv">normal</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">               </span><span class="nv">clearChangeableMessages</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">               </span><span class="nv">clearVolatileMessages</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-write</span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">mandatory</span>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; Allows the system to manage the device's memory. SNMP</span>
+</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="s">      Get operations on this object should always return normal (2).</span>
+</span><span id="__span-5-12"><a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="s">      clearChangeableMessages (3): the controller shall set dmsMessageStatus</span>
+</span><span id="__span-5-14"><a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="s">      for all changeable messages to notUsed (1), and release all memory</span>
+</span><span id="__span-5-15"><a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="s">      associated with changeable messages. This action does not affect any</span>
+</span><span id="__span-5-16"><a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="s">      changeable graphics or fonts.</span>
+</span><span id="__span-5-17"><a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="s">      clearVolatileMessages (4): the controller shall set dmsMessageStatus for</span>
+</span><span id="__span-5-19"><a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s">      all volatile messages to notUsed (1), and release all memory associated</span>
+</span><span id="__span-5-20"><a href="#__codelineno-5-20" id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s">      with volatile messages. This action does not affect any changeable</span>
+</span><span id="__span-5-21"><a href="#__codelineno-5-21" id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="s">      graphics or fonts.</span>
+</span><span id="__span-5-22"><a href="#__codelineno-5-22" id="__codelineno-5-22" name="__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a href="#__codelineno-5-23" id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.6.16"</span>
+</span><span id="__span-5-24"><a href="#__codelineno-5-24" id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">  </span><span class="n n-Type">DEFVAL</span><span class="w"> </span><span class="p">{</span><span class="nv">normal</span><span class="p">}</span>
+</span><span id="__span-5-25"><a href="#__codelineno-5-25" id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="integer32">Integer32<a class="headerlink" href="#integer32" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nv">maxPhases</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w">     </span><span class="n n-Type">Integer32</span><span class="w"> </span><span class="p">(</span><span class="mf">2.</span><span class="p">.</span><span class="mi">255</span><span class="p">)</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="n n-Type">UNITS</span><span class="w">      </span><span class="s">"phase"</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w">     </span><span class="nv">current</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; The Maximum Number of Phases this Controller Unit</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="s">       supports. This object indicates the maximum rows which shall appear in</span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="s">       the phaseTable object.</span>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.1.1.1"</span>
+</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="gauge32">Gauge32<a class="headerlink" href="#gauge32" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nv">dcmBatteryVoltage</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">Gauge32</span><span class="w"> </span><span class="p">(</span><span class="mf">0.</span><span class="p">.</span><span class="mi">255</span><span class="p">)</span>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="n n-Type">UNITS</span><span class="w"> </span><span class="s">"tenths of volts"</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; Indicates the voltage of the battery at the time of the</span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="s">      request. The value range shall be 00.0-25.5V in 0.1 increments.</span>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.9.2.2"</span>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">8</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="counter32">Counter32<a class="headerlink" href="#counter32" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nv">dcmVehicleSeqNum</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">Counter32</span><span class="w"> </span><span class="p">(</span><span class="mf">0.</span><span class="p">.</span><span class="mi">65535</span><span class="p">)</span>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">not-accessible</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; A number assigned to each vehicle that traverses a</span>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="s">      sensor array. The numbers are assigned sequentially over all sensor</span>
+</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="s">      arrays. The starting value is not defined and the value shall roll over</span>
+</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="s">      to a value of 0 after reaching the maximum. This number along with a</span>
+</span><span id="__span-8-10"><a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="s">      time tag (controller-localTime) is used to uniquely identify vehicles.</span>
+</span><span id="__span-8-11"><a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.9.1.26"</span>
+</span><span id="__span-8-12"><a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">9</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="unsigned32">Unsigned32<a class="headerlink" href="#unsigned32" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nv">dmsSignWidth</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">Unsigned32</span><span class="w"> </span><span class="p">(</span><span class="mf">0.</span><span class="p">.</span><span class="mi">65535</span><span class="p">)</span>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="n n-Type">UNITS</span><span class="w"> </span><span class="s">"millimeters"</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; Indicates the sign width in millimeters including the</span>
+</span><span id="__span-9-8"><a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="s">      border (dmsHorizontalBorder).</span>
+</span><span id="__span-9-9"><a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.1.4"</span>
+</span><span id="__span-9-10"><a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="object-identifier">Object Identifier<a class="headerlink" href="#object-identifier" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nv">dcmVCOID</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">InstancePointer</span>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; This field contains the OID of a Vehicle Criteria</span>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="s">      object that is supported by this device. The OID specified must be a</span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="s">      full OID from the root of the iso tree, relative OID's cannot be used.</span>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="s">      This allows referring to objects outside of this MIB. The specified OID</span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="s">      can also be an OID from a table (if the object is only defined within a</span>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="s">      table (e.g. Array Number), but it shall be the OID of the object from</span>
+</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="s">      the table in which the specified object is defined (e.g. if Array Number</span>
+</span><span id="__span-10-13"><a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="s">      is to be used, the OID shall be taken from the Logical IO To Array Map</span>
+</span><span id="__span-10-14"><a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="s">      Table.</span>
+</span><span id="__span-10-15"><a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.1.4"</span>
+</span><span id="__span-10-16"><a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="bits">BITS<a class="headerlink" href="#bits" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nv">systemCameraEquipped</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w">     </span><span class="n n-Type">BITS</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">cameraPower</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">                    </span><span class="nv">heaterPower</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">                    </span><span class="nv">wiper</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+</span><span id="__span-11-5"><a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">                    </span><span class="nv">washer</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+</span><span id="__span-11-6"><a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">                    </span><span class="nv">blower</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-11-7"><a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-11-8"><a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-11-9"><a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-11-10"><a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; A bit mapped value as defined below:</span>
+</span><span id="__span-11-11"><a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="s">      Bit When set, denotes the availability of a controllable:</span>
+</span><span id="__span-11-12"><a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="s">        0 Camera Power supply,</span>
+</span><span id="__span-11-13"><a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="s">        1 Heater Power supply,</span>
+</span><span id="__span-11-14"><a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="s">        2 Wiper,</span>
+</span><span id="__span-11-15"><a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="s">        3 Washer,</span>
+</span><span id="__span-11-16"><a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="s">        4 Blower</span>
+</span><span id="__span-11-17"><a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="s">      All other bits reserved.</span>
+</span><span id="__span-11-18"><a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.7.5.3"</span>
+</span><span id="__span-11-19"><a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">12</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="internet-address">Internet Address<a class="headerlink" href="#internet-address" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nv">intersectionAddressType</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">InetAddressType</span>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-write</span>
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-12-5"><a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-12-6"><a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; This object identifies the type of address stored in</span>
+</span><span id="__span-12-7"><a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="s">      intersectionAddress.</span>
+</span><span id="__span-12-8"><a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.10.2.2.1.13"</span>
+</span><span id="__span-12-9"><a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="n n-Type">DEFVAL</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">ipv4</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-10"><a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-11"><a href="#__codelineno-12-11" id="__codelineno-12-11" name="__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a href="#__codelineno-12-12" id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="nv">intersectionAddress</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-12-13"><a href="#__codelineno-12-13" id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">InetAddress</span>
+</span><span id="__span-12-14"><a href="#__codelineno-12-14" id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">  </span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-write</span>
+</span><span id="__span-12-15"><a href="#__codelineno-12-15" id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-12-16"><a href="#__codelineno-12-16" id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-12-17"><a href="#__codelineno-12-17" id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; This object provides the Internet address for the entry</span>
+</span><span id="__span-12-18"><a href="#__codelineno-12-18" id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="s">      and shall be a unicast address.</span>
+</span><span id="__span-12-19"><a href="#__codelineno-12-19" id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.10.2.2.1.2"</span>
+</span><span id="__span-12-20"><a href="#__codelineno-12-20" id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">  </span><span class="n n-Type">DEFVAL</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">'</span><span class="mi">00000000</span><span class="err">'h</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-21"><a href="#__codelineno-12-21" id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="text">Text<a class="headerlink" href="#text" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nv">fontName</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">SnmpAdminString</span><span class="w"> </span><span class="p">(</span><span class="kd">SIZE</span><span class="w"> </span><span class="p">(</span><span class="mf">0.</span><span class="p">.</span><span class="mi">64</span><span class="p">))</span>
+</span><span id="__span-13-3"><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-write</span>
+</span><span id="__span-13-4"><a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-13-5"><a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-13-6"><a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; Indicates the name of the font.</span>
+</span><span id="__span-13-7"><a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.3.2.1.3"</span>
+</span><span id="__span-13-8"><a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="textual-convention-macro">Textual Convention Macro<a class="headerlink" href="#textual-convention-macro" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n n-Type">MessageActivationCode</span><span class="w"> </span><span class="o">::=</span><span class="w"> </span><span class="n n-Type">TEXTUAL-CONVENTION</span>
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">  </span><span class="n n-Type">DISPLAY-HINT</span><span class="w"> </span><span class="err">\</span><span class="s">"2dm1dp1dt2dn2xc1d.1d.1d.1d\"</span>
+</span><span id="__span-14-3"><a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-14-4"><a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-14-5"><a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="s">"The MessageActivationCode consists of those parameters required to</span>
+</span><span id="__span-14-6"><a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="s">     activate a message on a DMS. It is defined as an OCTET STRING containing</span>
+</span><span id="__span-14-7"><a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="s">     the OER-encoding of the following ASN.1 structure:</span>
+</span><span id="__span-14-8"><a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="s">     MessageActivationCodeStructure ::= SEQUENCE {</span>
+</span><span id="__span-14-10"><a href="#__codelineno-14-10" id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="s">       duration INTEGER (0..65535),</span>
+</span><span id="__span-14-11"><a href="#__codelineno-14-11" id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="s">       activatePriority INTEGER (0..255),</span>
+</span><span id="__span-14-12"><a href="#__codelineno-14-12" id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="s">       messageMemoryType INTEGER (0..255),</span>
+</span><span id="__span-14-13"><a href="#__codelineno-14-13" id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="s">       messageNumber INTEGER (0..65535),</span>
+</span><span id="__span-14-14"><a href="#__codelineno-14-14" id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="s">       messageCRC OCTET STRING (SIZE (2)),</span>
+</span><span id="__span-14-15"><a href="#__codelineno-14-15" id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="s">       sourceAddress OCTET STRING (SIZE (4))</span>
+</span><span id="__span-14-16"><a href="#__codelineno-14-16" id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="s">       }</span>
+</span><span id="__span-14-17"><a href="#__codelineno-14-17" id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="s">     where,</span>
+</span><span id="__span-14-18"><a href="#__codelineno-14-18" id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="s">     duration = the maximum amount of time, in minutes, the message may be</span>
+</span><span id="__span-14-19"><a href="#__codelineno-14-19" id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="s">     displayed prior to activating the dmsDefaultEndDurationMessage.</span>
+</span><span id="__span-14-20"><a href="#__codelineno-14-20" id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="s">     dmsMessageTimeRemaining shall be set to this value upon successful</span>
+</span><span id="__span-14-21"><a href="#__codelineno-14-21" id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="s">     display of the indicated message. A value of 65535 shall indicate an</span>
+</span><span id="__span-14-22"><a href="#__codelineno-14-22" id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="s">     infinite duration.</span>
+</span><span id="__span-14-23"><a href="#__codelineno-14-23" id="__codelineno-14-23" name="__codelineno-14-23"></a>
+</span><span id="__span-14-24"><a href="#__codelineno-14-24" id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="s">     activatePriority = the activation priority of the message. If this value</span>
+</span><span id="__span-14-25"><a href="#__codelineno-14-25" id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="s">     is greater than or equal to the dmsMessageRunTimePriority of the</span>
+</span><span id="__span-14-26"><a href="#__codelineno-14-26" id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="s">     currently displayed message, the new message shall be displayed unless</span>
+</span><span id="__span-14-27"><a href="#__codelineno-14-27" id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="s">     errors are detected.</span>
+</span><span id="__span-14-28"><a href="#__codelineno-14-28" id="__codelineno-14-28" name="__codelineno-14-28"></a>
+</span><span id="__span-14-29"><a href="#__codelineno-14-29" id="__codelineno-14-29" name="__codelineno-14-29"></a><span class="s">     messageMemoryType = the dmsMessageMemoryType of the desired message.</span>
+</span><span id="__span-14-30"><a href="#__codelineno-14-30" id="__codelineno-14-30" name="__codelineno-14-30"></a><span class="s">     messageNumber = the dmsMessageNumber of the desired message.</span>
+</span><span id="__span-14-31"><a href="#__codelineno-14-31" id="__codelineno-14-31" name="__codelineno-14-31"></a><span class="s">     messageCRC = the dmsMessageCRC of the desired message.</span>
+</span><span id="__span-14-32"><a href="#__codelineno-14-32" id="__codelineno-14-32" name="__codelineno-14-32"></a><span class="s">     sourceAddress = the 4-byte IPv4 address of the device that requested the </span>
+</span><span id="__span-14-33"><a href="#__codelineno-14-33" id="__codelineno-14-33" name="__codelineno-14-33"></a><span class="s">                     activation.</span>
+</span><span id="__span-14-34"><a href="#__codelineno-14-34" id="__codelineno-14-34" name="__codelineno-14-34"></a>
+</span><span id="__span-14-35"><a href="#__codelineno-14-35" id="__codelineno-14-35" name="__codelineno-14-35"></a><span class="s">     For example, given the MULTI string '[jp3]TEST</span>
+</span><span id="__span-14-36"><a href="#__codelineno-14-36" id="__codelineno-14-36" name="__codelineno-14-36"></a><span class="s">     \[fl\]Flashing[/fl]\', stored in volatile memory slot 5 with no</span>
+</span><span id="__span-14-37"><a href="#__codelineno-14-37" id="__codelineno-14-37" name="__codelineno-14-37"></a><span class="s">     beacons and no pixel service, the message ID Code is '04 00 05 95 F9'.</span>
+</span><span id="__span-14-38"><a href="#__codelineno-14-38" id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="s">     If this message is to be displayed for 267 minutes with activation</span>
+</span><span id="__span-14-39"><a href="#__codelineno-14-39" id="__codelineno-14-39" name="__codelineno-14-39"></a><span class="s">     priority 55 from IP address 103.8.9.10, the message Activation Code is</span>
+</span><span id="__span-14-40"><a href="#__codelineno-14-40" id="__codelineno-14-40" name="__codelineno-14-40"></a><span class="s">     '01 0B 37 04 00 05 95 F9 67 08 09 0A' in hex and would be displayed</span>
+</span><span id="__span-14-41"><a href="#__codelineno-14-41" id="__codelineno-14-41" name="__codelineno-14-41"></a><span class="s">     to a user as the following based on the DISPLAY-HINT:</span>
+</span><span id="__span-14-42"><a href="#__codelineno-14-42" id="__codelineno-14-42" name="__codelineno-14-42"></a><span class="s">     '267m55p4t5n95F9c103.8.9.10'."</span>
+</span><span id="__span-14-43"><a href="#__codelineno-14-43" id="__codelineno-14-43" name="__codelineno-14-43"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="kt">OCTET STRING</span><span class="w"> </span><span class="p">(</span><span class="kd">SIZE</span><span class="w"> </span><span class="mi">12</span><span class="p">))</span>
+</span></code></pre></div>
+<h2 class="annex" id="block-object-using-identifier-and-type">Block Object Using Identifier and Type<a class="headerlink" href="#block-object-using-identifier-and-type" title="Permanent link">¶</a></h2>
+<p>As defined in Section 4.5.4, the definition of a Block Object consists
+of two parts:</p>
+<ol>
+<li>
+<p>The <code>OBJECT-TYPE</code> macro used for all <abbr title='entity identified by a node on the international object identifier tree.   NOTE -- See object instance and object type,   both of which are types of objects, along with any other entity that can be identified,  such as a standard. This document attempts to  use the most precise term within its text to assist in distinguishing among \"object type\" or \"object instance\". The use of the  term \"object\" is typically limited to registering items on the international object  identifier tree.'>object</abbr> types and</p>
+</li>
+<li>
+<p>A definition of the data structure using a slightly modified version
+    of <abbr title="Abstract Syntax Notation One, as defined by ITU-T X.680 (ISO/IEC 8824-1)">X.680 ASN.1</abbr>, as defined in Clause 4.5.4.2; this definition can be
+    placed in a <code>TEXTUAL-CONVENTION</code>, in the <code>&lt;Definition&gt;</code> subclause of
+    the <code>OBJECT-TYPE</code> macro, or in a location external to the <abbr title="sequence of NVT ASCII characters conforming to X.208 Abstract Syntax Notation One (ASN.1) and IAB STD 58. MIB modules are used to define the data objects that are to make up the instantiated objects of the MIB. NOTE---A MIB module can be, and within NTCIP   typically is, presented as both part of a standard and as a stand-alone, computer-readable text file.">MIB module</abbr>
+    and referenced.</p>
+</li>
+</ol>
+<p>The following uses the textual convention defined in Clause C.15.</p>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nv">dmsActivateMessage</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">MessageActivationCode</span>
+</span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-write</span>
+</span><span id="__span-15-4"><a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-15-5"><a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-15-6"><a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; A code indicating the active message. The value of this</span>
+</span><span id="__span-15-7"><a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="s">      object may be SET by a management station or modified by logic internal</span>
+</span><span id="__span-15-8"><a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="s">      to the DMS (e.g., activation of the end duration message, etc.).</span>
+</span><span id="__span-15-9"><a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a>
+</span><span id="__span-15-10"><a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="s">      When modified by internal logic with a reference to a message ID code,</span>
+</span><span id="__span-15-11"><a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="s">      the duration indicates 65535 (infinite), the activate priority indicates</span>
+</span><span id="__span-15-12"><a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="s">      255, and the source address indicates an address of 127.0.0.1.</span>
+</span><span id="__span-15-13"><a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a>
+</span><span id="__span-15-14"><a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="s">      If a GET is performed on this object, the DMS shall respond with the</span>
+</span><span id="__span-15-15"><a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="s">      value for the last message that was successfully activated.</span>
+</span><span id="__span-15-16"><a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a>
+</span><span id="__span-15-17"><a href="#__codelineno-15-17" id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.3.6.3"</span>
+</span><span id="__span-15-18"><a href="#__codelineno-15-18" id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="block-object-using-value-reference-and-a-defined-value">Block Object Using Value Reference and a Defined Value<a class="headerlink" href="#block-object-using-value-reference-and-a-defined-value" title="Permanent link">¶</a></h2>
+<p>In the following example, because the fields within the <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure
+are optional, a more meaningful value of DISPLAY-HINT cannot be
+provided. As a result, the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> macro references the
+ITSOerString.</p>
+<p>The reference to \"essNtcipCategory.0\" is an example of a
+valuereference that uses a number as an index.
+essTemperatureSensorHeight.x\" is an example of a valuereference that
+uses a DefinedValue as an index.</p>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nv">essStationMetaDataBlock</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-16-2"><a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">ITSOerString</span>
+</span><span id="__span-16-3"><a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-16-4"><a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-16-5"><a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-16-6"><a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="s">"&lt;Definition&gt; The OER-encoding of the following ASN.1 structure:</span>
+</span><span id="__span-16-7"><a href="#__codelineno-16-7" id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="s">        MessageActivationCodeStructure ::= SEQUENCE {</span>
+</span><span id="__span-16-8"><a href="#__codelineno-16-8" id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="s">            essNtcipCategory.0 OPTIONAL, -- @NTCIP1204-v03</span>
+</span><span id="__span-16-9"><a href="#__codelineno-16-9" id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="s">            essTypeOfStation.0 OPTIONAL, -- @NTCIP1204-v03</span>
+</span><span id="__span-16-10"><a href="#__codelineno-16-10" id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="s">            essLatitude.0 OPTIONAL, -- @NTCIP1204-v03</span>
+</span><span id="__span-16-11"><a href="#__codelineno-16-11" id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="s">            essLongitude.0 OPTIONAL, -- @NTCIP1204-v03</span>
+</span><span id="__span-16-12"><a href="#__codelineno-16-12" id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="s">            tempMetaData SEQUENCE OF TemperatureMetaData OPTIONAL</span>
+</span><span id="__span-16-13"><a href="#__codelineno-16-13" id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="s">            }</span>
+</span><span id="__span-16-14"><a href="#__codelineno-16-14" id="__codelineno-16-14" name="__codelineno-16-14"></a>
+</span><span id="__span-16-15"><a href="#__codelineno-16-15" id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="s">        TemperatureMetaData ::= SEQUENCE {</span>
+</span><span id="__span-16-16"><a href="#__codelineno-16-16" id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="s">            essTemperatureSensorIndex.x OPTIONAL, -- @NTCIP1204-v03</span>
+</span><span id="__span-16-17"><a href="#__codelineno-16-17" id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="s">            essTemperatureSensorHeight.x OPTIONAL -- @NTCIP1204-v03</span>
+</span><span id="__span-16-18"><a href="#__codelineno-16-18" id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="s">            }</span>
+</span><span id="__span-16-19"><a href="#__codelineno-16-19" id="__codelineno-16-19" name="__codelineno-16-19"></a>
+</span><span id="__span-16-20"><a href="#__codelineno-16-20" id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="s">      where,</span>
+</span><span id="__span-16-21"><a href="#__codelineno-16-21" id="__codelineno-16-21" name="__codelineno-16-21"></a><span class="s">      x = the essTemperatureSensorIndex for the value being reported</span>
+</span><span id="__span-16-22"><a href="#__codelineno-16-22" id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="s">      For example, the following left-hand hexadecimal code would be decoded</span>
+</span><span id="__span-16-23"><a href="#__codelineno-16-23" id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="s">      as follows:</span>
+</span><span id="__span-16-24"><a href="#__codelineno-16-24" id="__codelineno-16-24" name="__codelineno-16-24"></a>
+</span><span id="__span-16-25"><a href="#__codelineno-16-25" id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="s">      17           All optional fields other than essTypeOfStation are present</span>
+</span><span id="__span-16-26"><a href="#__codelineno-16-26" id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="s">      02           Category = \'permanent\'</span>
+</span><span id="__span-16-27"><a href="#__codelineno-16-27" id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="s">      02 50 AA 26  Latitude = 38.840870 degrees</span>
+</span><span id="__span-16-28"><a href="#__codelineno-16-28" id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="s">      F9 BD 2E AD  Longitude = -105.042259 degrees</span>
+</span><span id="__span-16-29"><a href="#__codelineno-16-29" id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="s">      02           Count for SEQUENCE OF = 2</span>
+</span><span id="__span-16-30"><a href="#__codelineno-16-30" id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="s">      03           Both optional fields are present</span>
+</span><span id="__span-16-31"><a href="#__codelineno-16-31" id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="s">      01           Index = 1</span>
+</span><span id="__span-16-32"><a href="#__codelineno-16-32" id="__codelineno-16-32" name="__codelineno-16-32"></a><span class="s">      01           Height for index 1 = 1 meter</span>
+</span><span id="__span-16-33"><a href="#__codelineno-16-33" id="__codelineno-16-33" name="__codelineno-16-33"></a><span class="s">      03           Both optional fields are present</span>
+</span><span id="__span-16-34"><a href="#__codelineno-16-34" id="__codelineno-16-34" name="__codelineno-16-34"></a><span class="s">      02           Index = 2</span>
+</span><span id="__span-16-35"><a href="#__codelineno-16-35" id="__codelineno-16-35" name="__codelineno-16-35"></a><span class="s">      05           Height for index 2 = 5 meters</span>
+</span><span id="__span-16-36"><a href="#__codelineno-16-36" id="__codelineno-16-36" name="__codelineno-16-36"></a><span class="s">     &lt;Object Identifier&gt; 1.3.6.1.4.1.1206.4.2.5.2.15.4"</span>
+</span><span id="__span-16-37"><a href="#__codelineno-16-37" id="__codelineno-16-37" name="__codelineno-16-37"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="block-object-using-value-dereferencing">Block Object Using Value Dereferencing<a class="headerlink" href="#block-object-using-value-dereferencing" title="Permanent link">¶</a></h2>
+<p>In the following example, the fields within the <abbr title="Abstract Syntax Notation One, as defined by either ITU-T X.208 or ITU-T X.680 (ISO/IEC 8824-1) (within the context used, both apply)">ASN.1</abbr> structure are not
+known at design time. Since a more meaningful value of DISPLAY-HINT
+cannot be provided, the <abbr title="abstract specification for a specific piece of data that can be instantiated within  a device (zero or many times depending on how  it is specified). It specifies the data using  the OBJECT-TYPE macro.">object type</abbr> macro references the ITSOerString.</p>
+<p>The reference to <code>essNtcipCategory.0</code> is an example of a
+<code>valuereference</code> that uses a number as an index.
+<code>essTemperatureSensorHeight.x</code> is an example of a <code>valuereference</code> that
+uses a <code>DefinedValue</code> as an index.</p>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nv">fdObjectGroupCurrentValue</span><span class="w"> </span><span class="n n-Type">OBJECT-TYPE</span>
+</span><span id="__span-17-2"><a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">  </span><span class="n n-Type">SYNTAX</span><span class="w"> </span><span class="n n-Type">ITSOerString</span>
+</span><span id="__span-17-3"><a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">  </span><span class="kc">MAX</span><span class="err">-</span><span class="n n-Type">ACCESS</span><span class="w"> </span><span class="nv">read-only</span>
+</span><span id="__span-17-4"><a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-17-5"><a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-17-6"><a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="s">"The OER encoded string of the following ASN.1 structure using the</span>
+</span><span id="__span-17-7"><a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="s">     refinements defined in Clause 4.5.4.2 of NTCIP 8004:</span>
+</span><span id="__span-17-8"><a href="#__codelineno-17-8" id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="s">     SEQUENCE {</span>
+</span><span id="__span-17-9"><a href="#__codelineno-17-9" id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="s">       *fdObjectGroupFieldObject.x.y.* -- @OBJECT-GROUP-MIB</span>
+</span><span id="__span-17-10"><a href="#__codelineno-17-10" id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="s">     }</span>
+</span><span id="__span-17-11"><a href="#__codelineno-17-11" id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="s">     where x and y represent the fdObjectGroupOwner and fdObjectGroupName of</span>
+</span><span id="__span-17-12"><a href="#__codelineno-17-12" id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="s">     the requested fdObjectGroupCurrentValue.</span>
+</span><span id="__span-17-13"><a href="#__codelineno-17-13" id="__codelineno-17-13" name="__codelineno-17-13"></a>
+</span><span id="__span-17-14"><a href="#__codelineno-17-14" id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="s">     If an error occurs in retrieving any value, fdObjectGroupLastError shall</span>
+</span><span id="__span-17-15"><a href="#__codelineno-17-15" id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="s">     be updated to reflect the reported error and the value of this object</span>
+</span><span id="__span-17-16"><a href="#__codelineno-17-16" id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="s">     (fdObjectGroupCurrentValue) shall be a zero-length string. "</span>
+</span><span id="__span-17-17"><a href="#__codelineno-17-17" id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">  </span><span class="n n-Type">REFERENCE</span><span class="w"> </span><span class="s">"NTCIP 1103 watchBlockValue"</span>
+</span><span id="__span-17-18"><a href="#__codelineno-17-18" id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">18</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="notification-type-macro">Notification Type Macro<a class="headerlink" href="#notification-type-macro" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="nv">sampleNotification</span><span class="w"> </span><span class="n n-Type">NOTIFICATION-TYPE</span>
+</span><span id="__span-18-2"><a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">  </span><span class="n n-Type">OBJECTS</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">sampleObject</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-18-3"><a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-18-4"><a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-18-5"><a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">    </span><span class="s">"A sample notification."</span>
+</span><span id="__span-18-6"><a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="mi">19</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="object-group-macro">Object Group Macro<a class="headerlink" href="#object-group-macro" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="nv">essCharacteristicsGroup</span><span class="w"> </span><span class="n n-Type">OBJECT-GROUP</span>
+</span><span id="__span-19-2"><a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">  </span><span class="n n-Type">OBJECTS</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">essNtcipCategory</span><span class="p">,</span>
+</span><span id="__span-19-3"><a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">            </span><span class="nv">essNtcipSiteDescription</span><span class="p">,</span>
+</span><span id="__span-19-4"><a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">            </span><span class="nv">essTypeOfStation</span><span class="p">,</span>
+</span><span id="__span-19-5"><a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">            </span><span class="nv">essLatitude</span><span class="p">,</span>
+</span><span id="__span-19-6"><a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">            </span><span class="nv">essLongitude</span><span class="p">,</span>
+</span><span id="__span-19-7"><a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">            </span><span class="nv">essReferenceHeight</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-19-8"><a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-19-9"><a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-19-10"><a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">    </span><span class="s">"Management information that characterizes the ESS."</span>
+</span><span id="__span-19-11"><a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">20</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="notification-group-macro">Notification Group Macro<a class="headerlink" href="#notification-group-macro" title="Permanent link">¶</a></h2>
+<div class="language-asn1 highlight"><pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nv">sampleNotificationGroup</span><span class="w"> </span><span class="n n-Type">NOTIFICATION-GROUP</span>
+</span><span id="__span-20-2"><a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="n n-Type">NOTIFICATIONS</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">sampleNotification</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-20-3"><a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">  </span><span class="n n-Type">STATUS</span><span class="w"> </span><span class="nv">current</span>
+</span><span id="__span-20-4"><a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">  </span><span class="n n-Type">DESCRIPTION</span>
+</span><span id="__span-20-5"><a href="#__codelineno-20-5" id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="s">"Notifications included in this document."</span>
+</span><span id="__span-20-6"><a href="#__codelineno-20-6" id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="o">::=</span><span class="w"> </span><span class="p">{</span><span class="nv">example</span><span class="w"> </span><span class="mi">21</span><span class="p">}</span>
+</span></code></pre></div>
+<h2 class="annex" id="module-compliance-macro">Module Compliance Macro<a class="headerlink" href="#module-compliance-macro" title="Permanent link">¶</a></h2>
+<p>sampleCompliance MODULE-COMPLIANCE
+  STATUS current
+  DESCRIPTION
+    "The conformance statement for this sample"
+  MODULE -- this module
+  MANDATORY-GROUPS {
+      essCharacteristicsGroup,
+      sampleNotificationGroup }
+::= {example 22}</p>
+</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 19:02:00 UTC">June 18, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a href="https://github.com/ite-org/NTCIP-8004" property="dct:title" rel="cc:attributionURL">NTCIP SMI</a> by <span property="cc:attributionName">NTCIP</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" rel="license noopener noreferrer" style="display:inline-block;" target="_blank">CC BY 4.0<img alt="" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img alt="" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a></p>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.status", "content.tooltips", "icons", "navigation.path", "navigation.top"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "latest", "provider": "mike"}}</script>
+<script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+</body>
+</html>
